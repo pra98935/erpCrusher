@@ -6,5 +6,36 @@
 */
 {
   "files": [],
-  "references": []
+  "references": [
+    {
+      "path": "./projects/admin-accounts/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/admin-accounts/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/machinery/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/machinery/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/purchase/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/purchase/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/sales/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/sales/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/stores/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/stores/tsconfig.spec.json"
+    }
+]
 }
