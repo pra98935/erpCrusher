@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UIHelper } from './helpers/ui.helpers';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'machinery';
+  isMobile:boolean;
+
+  constructor() { }
+
+  ngOnInit(): void {
+    // Remove account related class from body
+    const element = document.getElementsByTagName("body")[0];
+    element.className = "";
+ 
+    // UI operations
+    this.isMobile =UIHelper.isMobile();
+    UIHelper.manageNavigationPanel();
+  }
 }

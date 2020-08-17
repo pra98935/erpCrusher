@@ -27,7 +27,11 @@
               "projects/admin-accounts/src/favicon.ico",
               "projects/admin-accounts/src/assets"
             ],
-            "styles": [],
+            "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "projects/admin-accounts/src/styles.scss",
+              "projects/admin-accounts/src/assets/css/custom-style.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -89,9 +93,7 @@
               "projects/admin-accounts/src/favicon.ico",
               "projects/admin-accounts/src/assets"
             ],
-            "styles": [
-              "projects/admin-accounts/src/styles.scss"
-            ],
+            "styles": [],
             "scripts": []
           }
         },
@@ -147,7 +149,9 @@
               "projects/machinery/src/assets"
             ],
             "styles": [
-              "projects/machinery/src/styles.scss"
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "projects/machinery/src/styles.scss",
+              "projects/machinery/src/assets/css/custom-style.scss"
             ],
             "scripts": []
           },
@@ -268,7 +272,9 @@
               "projects/purchase/src/assets"
             ],
             "styles": [
-              "projects/purchase/src/styles.scss"
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "projects/purchase/src/styles.scss",
+              "projects/purchase/src/assets/css/custom-style.scss"
             ],
             "scripts": []
           },
@@ -389,7 +395,9 @@
               "projects/sales/src/assets"
             ],
             "styles": [
-              "projects/sales/src/styles.scss"
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "projects/sales/src/styles.scss",
+              "projects/sales/src/assets/css/custom-style.scss"
             ],
             "scripts": []
           },
@@ -510,7 +518,9 @@
               "projects/stores/src/assets"
             ],
             "styles": [
-              "projects/stores/src/styles.scss"
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "projects/stores/src/styles.scss",
+              "projects/stores/src/assets/css/custom-style.scss"
             ],
             "scripts": []
           },
