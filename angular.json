@@ -29,8 +29,7 @@
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "projects/admin-accounts/src/styles.scss",
-              "projects/admin-accounts/src/assets/css/custom-style.scss"
+              "projects/admin-accounts/src/styles.scss"
             ],
             "scripts": []
           },
@@ -150,8 +149,7 @@
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "projects/machinery/src/styles.scss",
-              "projects/machinery/src/assets/css/custom-style.scss"
+              "projects/machinery/src/styles.scss"
             ],
             "scripts": []
           },
@@ -273,8 +271,7 @@
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "projects/purchase/src/styles.scss",
-              "projects/purchase/src/assets/css/custom-style.scss"
+              "projects/purchase/src/styles.scss"
             ],
             "scripts": []
           },
@@ -396,8 +393,7 @@
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "projects/sales/src/styles.scss",
-              "projects/sales/src/assets/css/custom-style.scss"
+              "projects/sales/src/styles.scss"
             ],
             "scripts": []
           },
@@ -519,8 +515,7 @@
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "projects/stores/src/styles.scss",
-              "projects/stores/src/assets/css/custom-style.scss"
+              "projects/stores/src/styles.scss"
             ],
             "scripts": []
           },
@@ -612,6 +607,46 @@
             "production": {
               "devServerTarget": "stores:serve:production"
             }
+          }
+        }
+      }
+    },
+    "lib-header": {
+      "projectType": "library",
+      "root": "projects/lib-header",
+      "sourceRoot": "projects/lib-header/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/lib-header/tsconfig.lib.json",
+            "project": "projects/lib-header/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/lib-header/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/lib-header/src/test.ts",
+            "tsConfig": "projects/lib-header/tsconfig.spec.json",
+            "karmaConfig": "projects/lib-header/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/lib-header/tsconfig.lib.json",
+              "projects/lib-header/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         }
       }
