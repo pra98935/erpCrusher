@@ -9,11 +9,11 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: Constants.SALES,
+    path: '',
     loadChildren: () => import('./master/master.module').then(m => m.MasterModule)
   },
   {
-    path: Constants.SALES + '/' + Constants.DASHBOARD,
+    path: Constants.DASHBOARD,
     loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule)
   }
 ];

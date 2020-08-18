@@ -55,11 +55,11 @@ export class PortalLeftComponent implements OnInit {
             superChildArray: [
               {
                 name: 'Add',
-                url: Constants.SALES + '/' + Constants.RECIPE + '/' + Constants.ADD
+                url: Constants.RECIPE + '/' + Constants.ADD
               },
               {
                 name: 'List',
-                url: Constants.SALES + '/' + Constants.RECIPE + '/' + Constants.LIST
+                url: Constants.RECIPE + '/' + Constants.LIST
               }
             ]
           },
@@ -69,11 +69,11 @@ export class PortalLeftComponent implements OnInit {
             superChildArray: [
               {
                 name: 'Add',
-                url: Constants.SALES + '/' + Constants.ITEM_GROUP + '/' + Constants.ADD
+                url: Constants.ITEM_GROUP + '/' + Constants.ADD
               },
               {
                 name: 'List',
-                url: Constants.SALES + '/' + Constants.ITEM_GROUP + '/' + Constants.LIST
+                url: Constants.ITEM_GROUP + '/' + Constants.LIST
               }
             ]
           },
