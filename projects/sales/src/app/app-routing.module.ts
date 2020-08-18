@@ -4,9 +4,9 @@ import { Constants } from './constants/constants';
 
 const routes: Routes = [
   {
-    path:'',
-    redirectTo:Constants.DASHBOARD,
-    pathMatch:'full'
+    path: '',
+    redirectTo: Constants.DASHBOARD,
+    pathMatch: 'full'
   },
   {
     path: Constants.SALES,

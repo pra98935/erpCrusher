@@ -8,19 +8,19 @@ import { Constants } from '../constants/constants';
 
 const routes: Routes = [
   {
-    path: Constants.RECIPE+'/'+Constants.ADD,
+    path: Constants.RECIPE + '/' + Constants.ADD,
     component: AddComponent
   },
   {
-    path: Constants.RECIPE+'/'+Constants.LIST,
+    path: Constants.RECIPE + '/' + Constants.LIST,
     component: ListComponent
   },
   {
-    path: Constants.ITEM_GROUP+'/'+Constants.ADD,
+    path: Constants.ITEM_GROUP + '/' + Constants.ADD,
     component: IgAddComponent
   },
   {
-    path: Constants.ITEM_GROUP+'/'+Constants.LIST,
+    path: Constants.ITEM_GROUP + '/' + Constants.LIST,
     component: IgListComponent
   }
 ];

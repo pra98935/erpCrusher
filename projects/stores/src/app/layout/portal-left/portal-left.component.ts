@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Constants } from '../../constants/constants';
-import { LeftPanleModel } from '../../models/left-panel-model'
+import { LeftPanleModel } from '../../models/left-panel-model';
 
 @Component({
   selector: 'app-portal-left',
@@ -24,345 +24,345 @@ export class PortalLeftComponent implements OnInit {
   }
 
     /**
-   * 
-   * @param event 
-   * @param module 
+   *
+   * @param event
+   * @param module
    */
-  listClick(event, module) { 
+  listClick(event, module) {
     this.selectedItem = module;
     this.router.navigate([module]);
   }
 
-  onOptionsSelected(module:string){
-    console.log("the selected value is " + module);
+  onOptionsSelected(module: string){
+    console.log('the selected value is ' + module);
     this.router.navigate([module]);
   }
 
   adminAccountsMenu(){
     this.LeftPanleModelObj.adminAccountsMenu = [
       {
-        parentName:'Dashboard',
-        parentKey:'dashboard',
-        childArray:[]
+        parentName: 'Dashboard',
+        parentKey: 'dashboard',
+        childArray: []
       },
       {
-        parentName:'Master',
-        parentKey:'master',
-        childArray:[
+        parentName: 'Master',
+        parentKey: 'master',
+        childArray: [
           {
             childName: 'Account Group',
-            childKey:'accountgroup',
-            superChildArray:[
+            childKey: 'accountgroup',
+            superChildArray: [
               {
-                name:'Add',
-                url:'add'
+                name: 'Add',
+                url: 'add'
               },
               {
-                name:'List',
-                url:'list'
+                name: 'List',
+                url: 'list'
               },
               {
-                name:'A/C Group Tree',
-                url:''
+                name: 'A/C Group Tree',
+                url: ''
               },
               {
-                name:'setting',
-                url:'setting'
+                name: 'setting',
+                url: 'setting'
               }
             ]
           },
           {
             childName: 'Account',
-            childKey:'account',
-            superChildArray:[
+            childKey: 'account',
+            superChildArray: [
               {
-                name:'Add',
-                url:'add'
+                name: 'Add',
+                url: 'add'
               },
               {
-                name:'List',
-                url:'list'
+                name: 'List',
+                url: 'list'
               },
               {
-                name:'KYC List',
-                url:''
+                name: 'KYC List',
+                url: ''
               },
               {
-                name:'Update A/C Information',
-                url:'setting'
+                name: 'Update A/C Information',
+                url: 'setting'
               },
               {
-                name:'Opening Balance',
-                url:'setting'
+                name: 'Opening Balance',
+                url: 'setting'
               },
               {
-                name:'Unassigned A/C List',
-                url:'setting'
+                name: 'Unassigned A/C List',
+                url: 'setting'
               },
               {
-                name:'Transfer To Next Year',
-                url:'setting'
+                name: 'Transfer To Next Year',
+                url: 'setting'
               },
               {
-                name:'Account Merge ',
-                url:'setting'
+                name: 'Account Merge ',
+                url: 'setting'
               },
               {
-                name:'Account Used Detail ',
-                url:'setting'
+                name: 'Account Used Detail ',
+                url: 'setting'
               },
               {
-                name:'Balance Update',
-                url:'setting'
+                name: 'Balance Update',
+                url: 'setting'
               },
               {
-                name:'Multi Group Update',
-                url:'setting'
+                name: 'Multi Group Update',
+                url: 'setting'
               },
               {
-                name:'Multi GST No. Update',
-                url:'setting'
+                name: 'Multi GST No. Update',
+                url: 'setting'
               },
               {
-                name:'Site wise Account List',
-                url:'setting'
+                name: 'Site wise Account List',
+                url: 'setting'
               },
               {
-                name:'Delete Log List',
-                url:'setting'
+                name: 'Delete Log List',
+                url: 'setting'
               },
               {
-                name:'Unused Account List',
-                url:'setting'
+                name: 'Unused Account List',
+                url: 'setting'
               },
               {
-                name:'Delete Multiple A/C',
-                url:'setting'
+                name: 'Delete Multiple A/C',
+                url: 'setting'
               }
             ]
           },
           {
             childName: 'TDS Configuration',
-            childKey:'TDSConfiguration',
-            superChildArray:[
+            childKey: 'TDSConfiguration',
+            superChildArray: [
               {
-                name:'Add',
-                url:'add'
+                name: 'Add',
+                url: 'add'
               },
               {
-                name:'List',
-                url:'list'
+                name: 'List',
+                url: 'list'
               }
             ]
           },
           {
             childName: 'Budget',
-            childKey:'budget',
-            superChildArray:[
+            childKey: 'budget',
+            superChildArray: [
               {
-                name:'Budget Group',
-                url:'add'
+                name: 'Budget Group',
+                url: 'add'
               },
               {
-                name:'Budget Account',
-                url:'list'
+                name: 'Budget Account',
+                url: 'list'
               }
             ]
           },
           {
             childName: 'Branch / Division',
-            childKey:'budget',
-            superChildArray:[
+            childKey: 'budget',
+            superChildArray: [
               {
-                name:'Add',
-                url:'add'
+                name: 'Add',
+                url: 'add'
               },
               {
-                name:'List',
-                url:'list'
+                name: 'List',
+                url: 'list'
               },
               {
-                name:'Tree List',
-                url:'list'
+                name: 'Tree List',
+                url: 'list'
               },
               {
-                name:'Division wise Opening',
-                url:''
+                name: 'Division wise Opening',
+                url: ''
               }
             ]
           },
           {
             childName: 'Tax',
-            childKey:'tax',
-            superChildArray:[
+            childKey: 'tax',
+            superChildArray: [
               {
-                name:'Add',
-                url:'add'
+                name: 'Add',
+                url: 'add'
               },
               {
-                name:'GST Add',
-                url:'list'
+                name: 'GST Add',
+                url: 'list'
               },
               {
-                name:'List',
-                url:'list'
+                name: 'List',
+                url: 'list'
               }
             ]
           },
           {
             childName: 'Work Contract',
-            childKey:'workContract',
-            superChildArray:[
+            childKey: 'workContract',
+            superChildArray: [
               {
-                name:'Add',
-                url:'add'
+                name: 'Add',
+                url: 'add'
               },
               {
-                name:'GST Add',
-                url:'list'
+                name: 'GST Add',
+                url: 'list'
               },
               {
-                name:'List',
-                url:'list'
+                name: 'List',
+                url: 'list'
               }
             ]
           },
           {
             childName: 'Account Group Schedule',
-            childKey:'AccountGroupSchedule',
-            superChildArray:[
+            childKey: 'AccountGroupSchedule',
+            superChildArray: [
               {
-                name:'Add',
-                url:'add'
+                name: 'Add',
+                url: 'add'
               },
               {
-                name:'List',
-                url:'list'
+                name: 'List',
+                url: 'list'
               },
               {
-                name:'Group Tree',
-                url:'list'
+                name: 'Group Tree',
+                url: 'list'
               }
             ]
           },
           {
             childName: ' Account Schedule ',
-            childKey:' AccountSchedule ',
-            superChildArray:[
+            childKey: ' AccountSchedule ',
+            superChildArray: [
               {
-                name:'Add',
-                url:'add'
+                name: 'Add',
+                url: 'add'
               },
               {
-                name:'List',
-                url:'list'
+                name: 'List',
+                url: 'list'
               },
               {
-                name:'Assign A/C Schedule',
-                url:'list'
+                name: 'Assign A/C Schedule',
+                url: 'list'
               }
             ]
           },
           {
             childName: 'Account Create',
-            childKey:'AccountCreate',
-            superChildArray:[
+            childKey: 'AccountCreate',
+            superChildArray: [
               {
-                name:'Employee Account',
-                url:'add'
+                name: 'Employee Account',
+                url: 'add'
               }
             ]
           },
           {
             childName: 'Cheque Configuration',
-            childKey:' ChequeConfiguration ',
-            superChildArray:[
+            childKey: ' ChequeConfiguration ',
+            superChildArray: [
               {
-                name:'Add',
-                url:'add'
+                name: 'Add',
+                url: 'add'
               },
               {
-                name:'List',
-                url:'list'
+                name: 'List',
+                url: 'list'
               }
             ]
           },
           {
             childName: 'Item Stock Manual ',
-            childKey:'ItemStockManual',
-            superChildArray:[
+            childKey: 'ItemStockManual',
+            superChildArray: [
               {
-                name:'Site wise ',
-                url:'add'
+                name: 'Site wise ',
+                url: 'add'
               },
               {
-                name:'Division wise ',
-                url:'list'
+                name: 'Division wise ',
+                url: 'list'
               }
             ]
           },
           {
             childName: 'Financial Year',
-            childKey:'FinancialYear',
-            superChildArray:[]
+            childKey: 'FinancialYear',
+            superChildArray: []
           },
           {
             childName: 'Lock Month Financial',
-            childKey:'LockMonthFinancial',
-            superChildArray:[]
+            childKey: 'LockMonthFinancial',
+            superChildArray: []
           },
           {
             childName: 'Opening Balance Lock ',
-            childKey:'Opening Balance Lock',
-            superChildArray:[]
+            childKey: 'Opening Balance Lock',
+            superChildArray: []
           },
           {
             childName: 'Item Group',
-            childKey:'ItemGroup',
-            superChildArray:[
+            childKey: 'ItemGroup',
+            superChildArray: [
               {
-                name:'Add',
-                url:'add'
+                name: 'Add',
+                url: 'add'
               },
               {
-                name:'List',
-                url:'list'
+                name: 'List',
+                url: 'list'
               },
               {
-                name:'Group Tree',
-                url:'list'
+                name: 'Group Tree',
+                url: 'list'
               }
             ]
           },
           {
             childName: 'Narration ',
-            childKey:'Narration ',
-            superChildArray:[
+            childKey: 'Narration ',
+            superChildArray: [
               {
-                name:'Add',
-                url:'add'
+                name: 'Add',
+                url: 'add'
               },
               {
-                name:'List',
-                url:'list'
+                name: 'List',
+                url: 'list'
               },
             ]
           },
           {
             childName: 'Setting',
-            childKey:'Setting',
-            superChildArray:[
+            childKey: 'Setting',
+            superChildArray: [
               {
-                name:'Voucher Transaction',
-                url:'add'
+                name: 'Voucher Transaction',
+                url: 'add'
               },
               {
-                name:'General Setting ',
-                url:'list'
+                name: 'General Setting ',
+                url: 'list'
               },
               {
-                name:'Documents',
-                url:'list'
+                name: 'Documents',
+                url: 'list'
               },
             ]
           }
@@ -370,46 +370,46 @@ export class PortalLeftComponent implements OnInit {
         ]
       },
       {
-        parentName:'Transaction',
-        parentKey:'transaction',
-        childArray:[
+        parentName: 'Transaction',
+        parentKey: 'transaction',
+        childArray: [
           {
             childName: 'Account Group',
-            childKey:'accountgroup',
-            superChildArray:[
+            childKey: 'accountgroup',
+            superChildArray: [
               {
-                name:'Add',
-                url:'add'
+                name: 'Add',
+                url: 'add'
               },
               {
-                name:'List',
-                url:'list'
+                name: 'List',
+                url: 'list'
               }
             ]
           }
         ]
       },
       {
-        parentName:'Reports',
-        parentKey:'reports',
-        childArray:[
+        parentName: 'Reports',
+        parentKey: 'reports',
+        childArray: [
           {
             childName: 'Account Group',
-            childKey:'accountgroup',
-            superChildArray:[
+            childKey: 'accountgroup',
+            superChildArray: [
               {
-                name:'Add',
-                url:'add'
+                name: 'Add',
+                url: 'add'
               },
               {
-                name:'List',
-                url:'list'
+                name: 'List',
+                url: 'list'
               }
             ]
           }
         ]
       }
-    ]
+    ];
   }
 
 }

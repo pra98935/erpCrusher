@@ -8,4 +8,4 @@ export const Constants = {
     SALES_URL: 'sales',
     STORES_URL: 'stores',
 
-}
+};

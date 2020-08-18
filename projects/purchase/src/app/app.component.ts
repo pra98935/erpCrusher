@@ -8,17 +8,17 @@ import { UIHelper } from './helpers/ui.helpers';
 })
 export class AppComponent {
   title = 'purchase';
-  isMobile:boolean;
+  isMobile: boolean;
 
   constructor() { }
 
   ngOnInit(): void {
     // Remove account related class from body
-    const element = document.getElementsByTagName("body")[0];
-    element.className = "";
- 
+    const element = document.getElementsByTagName('body')[0];
+    element.className = '';
+
     // UI operations
-    this.isMobile =UIHelper.isMobile();
+    this.isMobile = UIHelper.isMobile();
     UIHelper.manageNavigationPanel();
   }
 }
