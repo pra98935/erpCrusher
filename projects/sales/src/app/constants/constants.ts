@@ -8,4 +8,14 @@ export const Constants = {
     SALES_URL: 'sales',
     STORES_URL: 'stores',
 
+    SALES: 'sales',
+
+    RECIPE:'recipe',
+    ITEM_GROUP:'item-group',
+
+    ADD:'add',
+    LIST:'list',
+    
+    DASHBOARD:'dashboard',
+
 }

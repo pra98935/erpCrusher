@@ -79,9 +79,12 @@
                             <ngb-panel *ngFor="let childItem of item.childArray; let i = index" id="{{childItem.childName}}" title="{{childItem.childName}}">
                                 <ng-template ngbPanelContent>
                                         <ng-container *ngIf="childItem.superChildArray.length > 0">
-                                            <ul
-                                                *ngFor="let superChildItem of childItem.superChildArray; let i = index">
-                                                <li>{{superChildItem.name}}</li>
+                                            <ul *ngFor="let superChildItem of childItem.superChildArray; let i = index">
+                                                <li>
+                                                    <a [routerLink]="superChildItem.url">
+                                                        {{superChildItem.name}}
+                                                    </a>    
+                                                </li>
                                             </ul>
                                         </ng-container>
                                 </ng-template>

@@ -50,94 +50,30 @@ export class PortalLeftComponent implements OnInit {
         parentKey:'master',
         childArray:[
           {
-            childName: 'Account Group',
-            childKey:'accountgroup',
+            childName: 'Recipe',
+            childKey:'recipe',
             superChildArray:[
               {
-                name:'Add',
-                url:'add'
+                name: 'Add',
+                url: Constants.SALES+'/'+Constants.RECIPE+'/'+Constants.ADD
               },
               {
-                name:'List',
-                url:'list'
-              },
-              {
-                name:'A/C Group Tree',
-                url:''
-              },
-              {
-                name:'setting',
-                url:'setting'
+                name: 'List',
+                url: Constants.SALES+'/'+Constants.RECIPE+'/'+Constants.LIST
               }
             ]
           },
           {
-            childName: 'Account',
-            childKey:'account',
+            childName: 'Item Group',
+            childKey:'itemGroup',
             superChildArray:[
               {
-                name:'Add',
-                url:'add'
+                name: 'Add',
+                url: Constants.SALES+'/'+Constants.ITEM_GROUP+'/'+Constants.ADD
               },
               {
-                name:'List',
-                url:'list'
-              },
-              {
-                name:'KYC List',
-                url:''
-              },
-              {
-                name:'Update A/C Information',
-                url:'setting'
-              },
-              {
-                name:'Opening Balance',
-                url:'setting'
-              },
-              {
-                name:'Unassigned A/C List',
-                url:'setting'
-              },
-              {
-                name:'Transfer To Next Year',
-                url:'setting'
-              },
-              {
-                name:'Account Merge ',
-                url:'setting'
-              },
-              {
-                name:'Account Used Detail ',
-                url:'setting'
-              },
-              {
-                name:'Balance Update',
-                url:'setting'
-              },
-              {
-                name:'Multi Group Update',
-                url:'setting'
-              },
-              {
-                name:'Multi GST No. Update',
-                url:'setting'
-              },
-              {
-                name:'Site wise Account List',
-                url:'setting'
-              },
-              {
-                name:'Delete Log List',
-                url:'setting'
-              },
-              {
-                name:'Unused Account List',
-                url:'setting'
-              },
-              {
-                name:'Delete Multiple A/C',
-                url:'setting'
+                name: 'List',
+                url: Constants.SALES+'/'+Constants.ITEM_GROUP+'/'+Constants.LIST
               }
             ]
           },
