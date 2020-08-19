@@ -27,3 +27,41 @@
 /////////////////////////////////////////////////////////////////////
 /////////////////////////////End Account CSS/////////////////////////
 /////////////////////////////////////////////////////////////////////  
+body{
+  // Prime Ng form
+  p-dropdown{
+    display: grid;
+  }
+  .p-dropdown .p-dropdown-label{
+    font-size: $font-size-small;
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+  .p-dropdown-panel .p-dropdown-items{
+    font-size: $font-size-small;
+  }
+  .p-dropdown-panel .p-dropdown-header .p-dropdown-filter {
+      padding-right: 1.5rem;
+      padding-top: 4px;
+      padding-bottom: 4px;
+      font-size: $font-size-small;
+  }
+  .p-dropdown:not(.p-disabled):hover {
+      border-color: $input-border-color;
+  }
+  .p-inputtext:enabled:focus {
+      outline: 0 none;
+      outline-offset: 0;
+      box-shadow: none;
+      border-color: $input-border-color;
+  }
+
+  // Normal Form
+  input[type="text"], input[type="email"], input[type="password"], input[type="number"] {
+      height: 26px !important;
+  }
+  .form-group label{
+    display: block;
+  }
+  
+}
