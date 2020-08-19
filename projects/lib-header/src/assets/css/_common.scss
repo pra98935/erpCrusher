@@ -1,8 +1,14 @@
+@import './base';
 body{
     //////////////////////////////////////////////////////////////////
     // Some basic css
     //////////////////////////////////////////////////////////////////
     
+    .title {
+        font-size: 14px;
+        box-shadow: 0 8px 6px -6px $input-border-color;
+        margin-bottom: 5px;
+    }
     
     button.opti_remove-button-css{
         border: none;
