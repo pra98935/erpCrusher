@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { MultiSelectModule } from 'primeng/multiselect';
 import { FormsModule } from '@angular/forms';
 import { DropdownModule } from 'primeng/dropdown';
+import { ButtonModule } from 'primeng/button';
 
 import { MasterRoutingModule } from './master-routing.module';
 import { ListComponent } from './recipe/list/list.component';
@@ -21,7 +22,8 @@ import { IgAddComponent } from './item-group/ig-add/ig-add.component';
     MasterRoutingModule,
     MultiSelectModule,
     FormsModule,
-    DropdownModule
+    DropdownModule,
+    ButtonModule
   ]
 })
 export class MasterModule { }

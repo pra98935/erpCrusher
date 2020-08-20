@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SelectItem, SelectItemGroup } from 'primeng/api';
-import { AddRecipeModel } from '../../../models/add-recipe.model';
+import { AddRecipeModel } from '../../../models/recipe.model';
 
 
 @Component({

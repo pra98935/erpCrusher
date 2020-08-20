@@ -12,3 +12,14 @@ export class AddRecipeModel{
     siteNameArray=[];
     selectedSiteName: string;
 }
+
+export class ListRecipeModel{    
+    productionTypeArray=[];
+    selectedProductionTYpe: string;
+    itemArray=[];
+    selectedItem: string;
+    customerNameArray=[];
+    selectedCustomer:string;
+    siteNameArray=[];
+    selectedSiteName: string;
+}

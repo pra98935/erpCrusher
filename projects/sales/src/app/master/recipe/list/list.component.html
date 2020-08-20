@@ -1,1 +1,54 @@
-<p>list works!</p>
+<div id="list_recipe">
+        <div class="title">Recipe List</div>
+        <div class="row">
+            <div class="col-md-4">
+                
+                <div class="form-group">
+                    <label for="sitename">Site Name</label>
+                    <p-dropdown [options]="listRecipeModelObject.siteNameArray" [(ngModel)]="listRecipeModelObject.selectedSiteName" placeholder="Site Name" [filter]="true"></p-dropdown>
+                </div>
+    
+                <div class="form-group">
+                    <label for="recipename">Recipe Name</label>
+                    <input type="text" name="recipename" class="form-control" id="recipename">
+                </div>
+    
+            </div>
+    
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="productiontype">Production Type</label>
+                    <p-dropdown [options]="listRecipeModelObject.productionTypeArray" [(ngModel)]="listRecipeModelObject.selectedProductionTYpe" placeholder="Production Type" [filter]="true"></p-dropdown>
+                </div>
+    
+                <div class="form-group">
+                    <label for="item">Item</label>
+                    <p-dropdown [options]="listRecipeModelObject.itemArray" [(ngModel)]="listRecipeModelObject.selectedItem" placeholder="Item" [filter]="true"></p-dropdown>
+                </div>
+            </div>
+    
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="customername">Customer Name</label>
+                    <p-dropdown [options]="listRecipeModelObject.customerNameArray" [(ngModel)]="listRecipeModelObject.selectedCustomer" placeholder="Customer Name" [filter]="true"></p-dropdown>
+                </div>
+    
+                <div class="form-check form-group">
+                    <label for="recivedby" class="rcvBy">Recieved By</label>
+                    <label class="form-check-label" for="self">
+                        <input type="radio" class="form-check-input" id="self" name="by" value="self" checked>Self
+                    </label>
+    
+                    <label class="form-check-label ml-5" for="party">
+                        <input type="radio" class="form-check-input" id="party" name="by" value="party">Party
+                    </label>
+                </div>
+
+            </div>
+
+            <div class="col-md-12 text-center">
+                <button pButton type="button" label="Search"></button>
+            </div>    
+    
+        </div>
+    </div>

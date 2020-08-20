@@ -53,6 +53,9 @@
         #opti_MainContentID {
             height: calc(100% - 50px); // top bar height 65px
             overflow-y: auto;
+            #opti_MainContentID_container{
+                padding: 0 15px;
+            }
         }
 
     // Css Related To top panel
