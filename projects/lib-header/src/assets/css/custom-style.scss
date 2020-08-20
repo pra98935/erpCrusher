@@ -55,6 +55,17 @@ body{
       box-shadow: none;
       border-color: $input-border-color;
   }
+  .ui-inputtext{
+    font-size: $font-size-small;
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+  .ui-dropdown{
+    border-color: $input-border-color;
+  }
+  .ui-widget{
+    font-size: $font-size-small;
+  }
 
   // Normal Form
   input[type="text"], input[type="email"], input[type="password"], input[type="number"] {
