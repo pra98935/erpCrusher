@@ -28,7 +28,9 @@
 /////////////////////////////End Account CSS/////////////////////////
 /////////////////////////////////////////////////////////////////////  
 body{
+  ///////////////////////
   // Prime Ng form
+  ///////////////////////
   p-dropdown{
     display: grid;
   }
@@ -67,7 +69,30 @@ body{
     font-size: $font-size-small;
   }
 
+  /////////////////////
+  // Panel Menu
+  /////////////////////
+  .ui-panelmenu .ui-panelmenu-content .ui-menuitem .ui-menuitem-link:focus {
+      outline: 0 none;
+      outline-offset: 0;
+      box-shadow: none;
+  }
+  .ui-panelmenu .ui-panelmenu-content .ui-menuitem .ui-menuitem-link{
+    padding: 2px 0.857em;
+  }
+  .ui-panelmenu .ui-panelmenu-header > a{
+    padding: 2px 0.857em;
+  }
+  .ui-panelmenu .ui-panelmenu-content .ui-menuitem .ui-menuitem-link:not(.ui-state-disabled):hover {
+      background-color: transparent;
+  }
+  .ui-panelmenu .ui-panelmenu-content .ui-menuitem .ui-menuitem-link:not(.ui-state-disabled):hover span{
+    color: $primaryColor !important;
+  }
+
+  /////////////////////
   // Normal Form
+  ////////////////////
   input[type="text"], input[type="email"], input[type="password"], input[type="number"] {
       height: 26px !important;
   }
