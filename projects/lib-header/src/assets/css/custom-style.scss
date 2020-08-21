@@ -68,6 +68,9 @@ body{
   .ui-widget{
     font-size: $font-size-small;
   }
+  .ui-dropdown:not(.ui-state-disabled):hover{
+    border-color: $input-border-color;
+  }
 
   /////////////////////
   // Panel Menu
@@ -94,10 +97,13 @@ body{
   // Normal Form
   ////////////////////
   input[type="text"], input[type="email"], input[type="password"], input[type="number"] {
-      height: 26px !important;
+      height: 28px !important;
   }
   .form-group label{
     display: block;
+  }
+  .form-control{
+    border-radius: 3px;
   }
   
 }
