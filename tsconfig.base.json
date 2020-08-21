@@ -19,6 +19,10 @@
       "lib-header": [
         "dist/lib-header/lib-header",
         "dist/lib-header"
+      ],
+      "lib-table": [
+        "dist/lib-table/lib-table",
+        "dist/lib-table"
       ]
     }
   }

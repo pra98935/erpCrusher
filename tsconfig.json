@@ -42,6 +42,12 @@
     },
     {
       "path": "./projects/lib-header/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/lib-table/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/lib-table/tsconfig.spec.json"
     }
 ]
 }
