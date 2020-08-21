@@ -9,7 +9,7 @@ import { ListRecipeModel } from '../../../models/recipe.model';
 export class ListComponent implements OnInit {
 
   listRecipeModelObject: ListRecipeModel = new ListRecipeModel();
-
+  
   constructor() { }
 
   ngOnInit(): void {
@@ -17,6 +17,7 @@ export class ListComponent implements OnInit {
     this.itemList();
     this.customerNameList();
     this.siteNameList();
+    this.tableList();
   }
 
   productionTypeList(){
@@ -56,6 +57,54 @@ export class ListComponent implements OnInit {
         {label: 'London', value: 'LDN'},
         {label: 'Istanbul', value: 'IST'},
         {label: 'Paris', value: 'PRS'}
+    ];
+  }
+
+  tableList(){
+    this.listRecipeModelObject.tableArray = [
+      {
+        vin:'vin1',
+        year:2011,
+        brand:'maruti',
+        color:'red'
+      },
+      {
+        vin:'vin2',
+        year:2011,
+        brand:'maruti',
+        color:'red'
+      },
+      {
+        vin:'vin3',
+        year:2011,
+        brand:'maruti',
+        color:'red'
+      },
+      {
+        vin:'vin4',
+        year:2011,
+        brand:'maruti',
+        color:'red'
+      },
+      {
+        vin:'vin5',
+        year:2011,
+        brand:'maruti',
+        color:'red'
+      },
+      {
+        vin:'vin6',
+        year:2011,
+        brand:'maruti',
+        color:'red'
+      }
+    ]
+
+    this.listRecipeModelObject.tableCols = [
+        { field: 'vin', header: 'Vin' },
+        { field: 'year', header: 'Year' },
+        { field: 'brand', header: 'Brand' },
+        { field: 'color', header: 'Color' }
     ];
   }
 

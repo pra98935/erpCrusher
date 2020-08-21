@@ -11,6 +11,8 @@ export class AddRecipeModel{
     selectedgst: string;
     siteNameArray=[];
     selectedSiteName: string;
+    tableArray = [];
+    tableCols = []
 }
 
 export class ListRecipeModel{    
@@ -22,4 +24,6 @@ export class ListRecipeModel{
     selectedCustomer:string;
     siteNameArray=[];
     selectedSiteName: string;
+    tableArray = [];
+    tableCols = []
 }

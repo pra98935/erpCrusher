@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, Input } from '@angular/core';
 
 @Component({
   selector: 'lib-lib-table',
@@ -12,39 +12,12 @@ export class LibTableComponent implements OnInit {
   exportColumns = [];
   constructor() { }
 
+  @Input('tableCols') tableCols;
+  @Input('tableData') tableData;
+
   ngOnInit(): void {
-    this.dataArray = [
-      {
-        vin:'vin1',
-        year:2011,
-        brand:'maruti',
-        color:'red'
-      },
-      {
-        vin:'vin2',
-        year:2011,
-        brand:'maruti',
-        color:'red'
-      },
-      {
-        vin:'vin3',
-        year:2011,
-        brand:'maruti',
-        color:'red'
-      },
-      {
-        vin:'vin4',
-        year:2011,
-        brand:'maruti',
-        color:'red'
-      }
-    ]
-    this.cols = [
-        { field: 'vin', header: 'Vin' },
-        {field: 'year', header: 'Year' },
-        { field: 'brand', header: 'Brand' },
-        { field: 'color', header: 'Color' }
-    ];
+    this.dataArray = this.tableData;
+    this.cols = this.tableCols;
     this.exportColumns = this.cols.map(col => ({title: col.header, dataKey: col.field}));
 
   }

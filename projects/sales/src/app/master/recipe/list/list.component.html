@@ -51,7 +51,10 @@
             </div>   
             
             <div class="col-md-12">
-                <lib-lib-table></lib-lib-table>
+                <lib-lib-table 
+                    [tableCols]="listRecipeModelObject.tableCols" 
+                    [tableData]="listRecipeModelObject.tableArray">
+                </lib-lib-table>
             </div>    
     
         </div>

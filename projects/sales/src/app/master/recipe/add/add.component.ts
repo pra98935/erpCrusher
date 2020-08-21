@@ -19,6 +19,7 @@ export class AddComponent implements OnInit {
     this.customerNameList();
     this.gstList();
     this.siteNameList();
+    this.tableList();
   }
 
   unitList(){
@@ -78,6 +79,54 @@ export class AddComponent implements OnInit {
         {label: 'London', value: 'LDN'},
         {label: 'Istanbul', value: 'IST'},
         {label: 'Paris', value: 'PRS'}
+    ];
+  }
+
+  tableList(){
+    this.addRecipeModelObject.tableArray = [
+      {
+        vin:'master1',
+        year:2011,
+        brand:'maruti',
+        color:'red'
+      },
+      {
+        vin:'master2',
+        year:2011,
+        brand:'maruti',
+        color:'red'
+      },
+      {
+        vin:'master3',
+        year:2011,
+        brand:'maruti',
+        color:'red'
+      },
+      {
+        vin:'master4',
+        year:2011,
+        brand:'maruti',
+        color:'red'
+      },
+      {
+        vin:'master5',
+        year:2011,
+        brand:'maruti',
+        color:'red'
+      },
+      {
+        vin:'master6',
+        year:2011,
+        brand:'maruti',
+        color:'red'
+      }
+    ]
+
+    this.addRecipeModelObject.tableCols = [
+        { field: 'vin', header: 'Vin' },
+        { field: 'year', header: 'Year' },
+        { field: 'brand', header: 'Brand' },
+        { field: 'color', header: 'Color' }
     ];
   }
 
