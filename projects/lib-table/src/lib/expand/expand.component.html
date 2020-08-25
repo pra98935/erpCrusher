@@ -1,0 +1,66 @@
+
+        <h3>Expand Rows</h3>
+        <p-table 
+            #dtExpand
+            [columns]="cols" 
+            [value]="dataArray"
+            [resizableColumns]="true" 
+            columnResizeMode="expand"
+            [paginator]="true" 
+            [rows]="2" 
+            [showCurrentPageReport]="false"
+            [reorderableColumns]="true"
+            dataKey={{dataKeyForExpand}}
+            >
+            <!-- Download Part -->
+            <ng-template pTemplate="caption">
+                <div class="ui-helper-clearfix" style="text-align: left">
+                    <button type="button" pButton icon="pi pi-file-o" iconPos="left" label="CSV" (click)="dtExpand.exportCSV()" style="margin-right: 0.5em;"></button>
+                    <button type="button" pButton icon="pi pi-file-excel" iconPos="left" label="EXCEL" (click)="exportExcel()" style="margin-right: 0.5em;" class="ui-button-success"></button>
+                    <button type="button" pButton icon="pi pi-file-pdf" iconPos="left" label="PDF" (click)="exportPdf()" class="ui-button-warning"></button>
+                </div>
+            </ng-template>
+    
+            <!-- Header Part -->
+            <ng-template pTemplate="header" let-columns>
+                <tr>
+                    <th style="width: 3em"></th>
+                    <th *ngFor="let col of columns" [pSortableColumn]="col.field" pResizableColumn pReorderableColumn>
+                        {{col.header}}
+                        <p-sortIcon [field]="col.field" ariaLabel="Activate to sort" ariaLabelDesc="Activate to sort in descending order" ariaLabelAsc="Activate to sort in ascending order"></p-sortIcon>
+                    </th>
+                </tr>
+    
+                <tr>
+                    <th style="width: 3em"></th>
+                    <th *ngFor="let col of columns" [ngSwitch]="col.field">
+                        <input pInputText type="text" (input)="dtExpand.filter($event.target.value, col.field, 'contains')">
+                    </th>
+                </tr>
+            </ng-template>
+    
+            <!-- Body Part -->
+            <ng-template pTemplate="body" let-rowData let-columns="columns" let-expanded="expanded">
+                <tr [pReorderableRow]="index">
+                    <td>
+                        <a href="#" [pRowToggler]="rowData">
+                            <i [ngClass]="expanded ? 'pi pi-chevron-down' : 'pi pi-chevron-right'"></i>
+                        </a>
+                    </td>
+                    <td *ngFor="let col of columns" class="ui-resizable-column">
+                            {{rowData[col.field]}}
+                    </td>
+                </tr>
+            </ng-template>
+    
+            <ng-template pTemplate="rowexpansion" let-rowDataChild let-columns="columns">
+                <tr>
+                    <td style="width: 3em"></td>
+                    <td *ngFor="let col of columns" class="ui-resizable-column">
+                            {{rowDataChild[col.field]}}
+                    </td>
+                </tr>
+            </ng-template>
+    
+        </p-table>
+    
