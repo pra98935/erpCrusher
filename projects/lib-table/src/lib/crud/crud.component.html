@@ -1,49 +1,83 @@
+<h3>CRUD</h3>
+<p-table #dtcrud [columns]="cols" [value]="dataArray" [resizableColumns]="true" columnResizeMode="expand"
+    [paginator]="true" [rows]="2" [showCurrentPageReport]="false" [reorderableColumns]="true"
+    dataKey={{dataKeyForCrud}}>
+    <!-- Download Part -->
+    <ng-template pTemplate="caption">
+        <div class="ui-helper-clearfix" style="text-align: left">
+            <button type="button" pButton icon="pi pi-file-o" iconPos="left" label="CSV" (click)="dtcrud.exportCSV()"
+                style="margin-right: 0.5em;"></button>
+            <button type="button" pButton icon="pi pi-file-excel" iconPos="left" label="EXCEL" (click)="exportExcel()"
+                style="margin-right: 0.5em;" class="ui-button-success"></button>
+            <button type="button" pButton icon="pi pi-file-pdf" iconPos="left" label="PDF" (click)="exportPdf()"
+                class="ui-button-warning"></button>
+        </div>
+    </ng-template>
 
-        <h3>CRUD</h3>
-        <p-table 
-            #dtcrud
-            [columns]="cols" 
-            [value]="dataArray"
-            [resizableColumns]="true" 
-            columnResizeMode="expand"
-            [paginator]="true" 
-            [rows]="2" 
-            [showCurrentPageReport]="false"
-            [reorderableColumns]="true"
-            dataKey={{dataKeyForCrud}}
-            >
-            <!-- Download Part -->
-            <ng-template pTemplate="caption">
-                <div class="ui-helper-clearfix" style="text-align: left">
-                    <button type="button" pButton icon="pi pi-file-o" iconPos="left" label="CSV" (click)="dtcrud.exportCSV()" style="margin-right: 0.5em;"></button>
-                    <button type="button" pButton icon="pi pi-file-excel" iconPos="left" label="EXCEL" (click)="exportExcel()" style="margin-right: 0.5em;" class="ui-button-success"></button>
-                    <button type="button" pButton icon="pi pi-file-pdf" iconPos="left" label="PDF" (click)="exportPdf()" class="ui-button-warning"></button>
-                </div>
-            </ng-template>
+    <!-- Header Part -->
+    <ng-template pTemplate="header" let-columns>
+        <tr>
+            <th *ngFor="let col of columns" [pSortableColumn]="col.field" pResizableColumn pReorderableColumn>
+                {{col.header}}
+                <p-sortIcon [field]="col.field" ariaLabel="Activate to sort"
+                    ariaLabelDesc="Activate to sort in descending order"
+                    ariaLabelAsc="Activate to sort in ascending order"></p-sortIcon>
+            </th>
+            <th>Action</th>
+        </tr>
+
+        <tr>
+            <th *ngFor="let col of columns" [ngSwitch]="col.field">
+                <input pInputText type="text" (input)="dtcrud.filter($event.target.value, col.field, 'contains')">
+            </th>
+            <th></th>
+        </tr>
+    </ng-template>
+
+    <!-- Body Part -->
+    <ng-template pTemplate="body" let-rowData let-columns="columns">
+        <tr [pReorderableRow]="index">
+            <td *ngFor="let col of columns" class="ui-resizable-column">
+                {{rowData[col.field]}}
+            </td>
+            <td>
+                <button pButton pRipple icon="pi pi-pencil" class="p-button-rounded p-button-success p-mr-2"
+                    (click)="editRow(rowData)"></button>
+                <button pButton pRipple icon="pi pi-trash" class="p-button-rounded p-button-warning"
+                    (click)="deleteRow(rowData)"></button>
+            </td>
+        </tr>
+    </ng-template>
+</p-table>
+
+<!-- Dialouge For Edit -->
+<!-- <p-confirmDialog header="Car Details" [(visible)]="displayDialog" [style]="{width: '50vw'}">
     
-            <!-- Header Part -->
-            <ng-template pTemplate="header" let-columns>
-                <tr>
-                    <th *ngFor="let col of columns" [pSortableColumn]="col.field" pResizableColumn pReorderableColumn>
-                        {{col.header}}
-                        <p-sortIcon [field]="col.field" ariaLabel="Activate to sort" ariaLabelDesc="Activate to sort in descending order" ariaLabelAsc="Activate to sort in ascending order"></p-sortIcon>
-                    </th>
-                </tr>
-    
-                <tr>
-                    <th *ngFor="let col of columns" [ngSwitch]="col.field">
-                        <input pInputText type="text" (input)="dtcrud.filter($event.target.value, col.field, 'contains')">
-                    </th>
-                </tr>
-            </ng-template>
-    
-            <!-- Body Part -->
-            <ng-template pTemplate="body" let-rowData let-columns="columns">
-                <tr [pReorderableRow]="index">
-                    <td *ngFor="let col of columns" class="ui-resizable-column">
-                            {{rowData[col.field]}}
-                    </td>
-                </tr>
-            </ng-template>
-        </p-table>
-    
+    Template section
+
+    <p-footer>
+        <div class="ui-dialog-buttonpane ui-helper-clearfix">
+            <button type="button" pButton icon="pi pi-times" (click)="delete()" label="Save"></button>
+            <button type="button" pButton icon="pi pi-check" (click)="save()" label="Cancel"></button>
+        </div>
+    </p-footer>
+</p-confirmDialog> -->
+
+<!-- Dialouge For Delete -->
+<!-- <p-confirmDialog #del header="Delete Details" [(visible)]="displayDeleteDialog" [style]="{width: '50vw'}">
+    Template section
+    <p-footer>
+        <div class="ui-dialog-buttonpane ui-helper-clearfix">
+            <button type="button" pButton icon="pi pi-times" (click)="del.accept()" label="Yes"></button>
+            <button type="button" pButton icon="pi pi-check" (click)="del.reject()" label="No"></button>
+        </div>
+    </p-footer>
+</p-confirmDialog> -->
+<p-confirmDialog [style]="{width: '50vw'}" key="deleteDialog" [style]="{width: '50vw'}"></p-confirmDialog>
+
+<p-confirmDialog [style]="{width: '50vw'}" key="editDialog" [style]="{width: '50vw'}">
+    Edit 
+</p-confirmDialog>
+
+
+<!-- Message -->

@@ -1,22 +1,30 @@
 import { Component, OnInit, ViewEncapsulation, Input } from '@angular/core';
+import {Message} from 'primeng/api';
+import {ConfirmationService} from 'primeng/api';
 
 @Component({
   selector: 'lib-crud',
   templateUrl: './crud.component.html',
   styleUrls: ['./crud.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
+  providers: [ConfirmationService]
 })
 export class CrudComponent implements OnInit {
 
   @Input('tableCols') tableCols;
   @Input('tableData') tableData;
 
+  msgs: Message[] = [];
+  displayDialog: boolean;
+  displayDeleteDialog: boolean;
+
+
   dataArray = [];
   cols = [];
   exportColumns = [];
   dataKeyForCrud: string;
 
-  constructor() { }
+  constructor(private _confirmationService: ConfirmationService) { }
 
   ngOnInit(): void {
     this.dataKeyForCrud = this.tableCols[0].field;
@@ -61,6 +69,50 @@ export class CrudComponent implements OnInit {
         dataArray.push(item);
     }
     return dataArray;
+  }
+
+  editRow(raw){
+    console.log('edit');
+    console.log(raw);
+    //this.displayDialog = true;
+
+    this._confirmationService.confirm({
+        //message: 'Edit Record',
+        header: 'Edit',
+        icon: 'pi pi-info-circle',
+        accept: () => {
+            //this.msgs = [{severity:'info', summary:'Confirmed', detail:'Record deleted'}];
+        },
+        reject: () => {
+            //this.msgs = [{severity:'info', summary:'Rejected', detail:'You have rejected'}];
+        },
+        key: "editDialog"
+    });
+
+  }
+
+  deleteRow(raw){
+    //this.displayDeleteDialog = true;
+    this._confirmationService.confirm({
+      message: 'Do you want to delete this record?',
+      header: 'Delete Confirmation',
+      icon: 'pi pi-info-circle',
+      accept: () => {
+          //this.msgs = [{severity:'info', summary:'Confirmed', detail:'Record deleted'}];
+      },
+      reject: () => {
+          //this.msgs = [{severity:'info', summary:'Rejected', detail:'You have rejected'}];
+      },
+      key: "deleteDialog"
+  });
+  }
+
+  delete(){
+
+  }
+  
+  save(){
+
   }
 
 }
