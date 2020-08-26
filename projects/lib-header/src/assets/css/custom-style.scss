@@ -1,6 +1,7 @@
 @import '_typography-button-layout';
 @import '_responsive';
 @import '_common';
+@import './theme/_basic';
 
 
 /////////////////////////////////////////////////////////////////////
@@ -104,6 +105,9 @@ body{
   }
   .form-control{
     border-radius: 3px;
+  }
+  .form-group:last-child{
+    margin-bottom: 0;
   }
   
 }

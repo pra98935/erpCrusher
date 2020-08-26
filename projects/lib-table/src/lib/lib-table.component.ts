@@ -9,14 +9,18 @@ import { Component, OnInit, ViewEncapsulation, Input } from '@angular/core';
 export class LibTableComponent implements OnInit {
   dataArray = [];
   cols = [];
+  tableType: string;
   exportColumns = [];
   constructor() { }
 
+
   @Input('tableCols') tableCols;
   @Input('tableData') tableData;
+  @Input('tableTypeData') tableTypeData;
 
   ngOnInit(): void {
     this.dataArray = this.tableData;
     this.cols = this.tableCols;
+    this.tableType = this.tableTypeData;
   }
 }

@@ -1,0 +1,104 @@
+.basicTheme{
+    
+    // CSS for left panel
+    app-portal-left{
+        background: #122F3B;
+
+        .ui-panelmenu .ui-panelmenu-header > a {
+            border: none;
+            background-color: transparent;
+            color: #fff;
+            padding: 0.714em 0.857em;
+            font-weight: 700;
+            position: static;
+            font-size: 14px;
+            border-radius: 3px;
+            transition: background-color 0.2s, box-shadow 0.2s;
+        }
+
+        .opti_left-navigation {
+            margin: 0;
+        }
+
+        .ui-panelmenu .ui-panelmenu-content .ui-menuitem .ui-menuitem-link .ui-menuitem-text,
+        .ui-panelmenu .ui-panelmenu-content .ui-menuitem .ui-menuitem-link,
+        .ui-panelmenu .ui-panelmenu-content .ui-menuitem .ui-menuitem-link:not(.ui-state-disabled):hover span,
+        .ui-panelmenu .ui-panelmenu-content .ui-menuitem .ui-menuitem-link:not(.ui-state-disabled):hover span  {
+            color: #fff;
+        }
+
+        .ui-panelmenu .ui-panelmenu-content{
+            background: transparent;
+            border: none;
+        }
+
+        .ui-panelmenu .ui-panelmenu-header.ui-state-active > a:hover,
+        .ui-panelmenu .ui-panelmenu-header:not(.ui-state-active) > a:hover{
+            background: -webkit-linear-gradient(-45deg, #07a7e3 0%, #32dac3 100%);
+            background: linear-gradient(135deg, #07a7e3 0%, #32dac3 100%);
+            color: #fff;
+            border: none;
+        }
+
+        .ui-panelmenu .ui-panelmenu-header:not(.ui-state-active) > a:hover{
+            border: none;
+        }
+
+        .ui-panelmenu .ui-panelmenu-header > a:focus {
+            box-shadow: none;
+        }
+
+        .ui-panelmenu .ui-panelmenu-header:not(.ui-state-active) > a:hover .ui-panelmenu-icon {
+            color: white;
+        }
+
+        .ui-panelmenu .ui-panelmenu-content>.ui-panelmenu-root-submenu>.ui-submenu-list {
+            background: #0e262f;
+            border-left: 5px solid #07a7e3;        
+        }
+
+        .ui-panelmenu .ui-panelmenu-header>a{
+            padding-left:0 ;
+        }
+
+        .ui-panelmenu .ui-panelmenu-content .ui-menuitem .ui-menuitem-link:not(.ui-state-disabled):hover span{
+            color: #32dac3 !important;
+        }
+        
+        
+    }
+
+    // CSS for Header
+    #opti_RightPanelID{
+
+        // Header 
+        #opti_TopBarID{
+            border-bottom: 1px solid #eee;
+            background: none;
+
+            #opti_TopBarID input[type=email]:focus, #opti_TopBarID input[type=text]:focus {
+                border-color: transparent;
+                box-shadow: none;
+                outline: none;
+                background: #eee;
+            }
+
+            .opti_search-form{
+                background: #eee;
+            }
+            
+        }
+
+        // Right Section
+        #opti_MainContentID {
+            background: #F6F8F8;
+            .whitebox{
+                background: white;
+                border: #eee;
+                padding: 15px;
+            }
+        }
+    }
+
+
+}

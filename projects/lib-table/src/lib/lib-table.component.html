@@ -1,14 +1,14 @@
 <!-- ------------------------------------- -->
 <!-- Basic Table -->
 <!-- ------------------------------------- -->
-<lib-basic *ngIf="dataArray.length>0" [tableCols]="cols" [tableData]="dataArray"></lib-basic>
+<lib-basic *ngIf="dataArray.length>0 && tableTypeData === 'basic'" [tableCols]="cols" [tableData]="dataArray"></lib-basic>
 
 <!-- ------------------------------------- -->
 <!-- Expand Table -->
 <!-- ------------------------------------- -->
-<lib-expand *ngIf="dataArray.length>0" [tableCols]="cols" [tableData]="dataArray"></lib-expand>
+<lib-expand *ngIf="dataArray.length>0 && tableTypeData === 'expand'" [tableCols]="cols" [tableData]="dataArray"></lib-expand>
 
 <!-- ------------------------------------- -->
 <!-- CRUD Table -->
 <!-- ------------------------------------- -->
-<lib-crud *ngIf="dataArray.length>0" [tableCols]="cols" [tableData]="dataArray"></lib-crud>
+<lib-crud *ngIf="dataArray.length>0 && tableTypeData === 'crud'" [tableCols]="cols" [tableData]="dataArray"></lib-crud>

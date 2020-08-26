@@ -10,6 +10,9 @@ import { AddRecipeModel } from '../../../models/recipe.model';
 })
 export class AddComponent implements OnInit {
   addRecipeModelObject: AddRecipeModel = new AddRecipeModel();
+  basic: string = 'basic';
+  expand: string = 'expand';
+  crud: string = 'crud';
   constructor() { }
 
   ngOnInit(): void {

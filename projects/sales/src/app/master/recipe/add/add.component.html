@@ -1,103 +1,136 @@
 <div id="add_recipe">
     <div class="title">Recipe Master</div>
-    <div class="row">
-        <div class="col-md-4">
-            <div class="form-check form-group">
-                <label for="recivedby" class="rcvBy">Recieved By</label>
-                <label class="form-check-label" for="self">
-                    <input type="radio" class="form-check-input" id="self" name="by" value="self" checked>Self
-                </label>
+    <div class="col-md-12 whitebox">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-check form-group">
+                    <label for="recivedby" class="rcvBy">Recieved By</label>
+                    <label class="form-check-label" for="self">
+                        <input type="radio" class="form-check-input" id="self" name="by" value="self" checked>Self
+                    </label>
 
-                <label class="form-check-label ml-5" for="party">
-                    <input type="radio" class="form-check-input" id="party" name="by" value="party">Party
-                </label>
+                    <label class="form-check-label ml-5" for="party">
+                        <input type="radio" class="form-check-input" id="party" name="by" value="party">Party
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <label for="recipename">Recipe Name
+                        <span class="error">*</span>
+                        <span class="error float-right">Please fill required Field</span>
+                    </label>
+                    <input type="text" name="recipename" class="form-control" id="recipename">
+                </div>
+
+                <div class="form-group">
+                    <label for="customersitename">Customer Site Name </label>
+                    <input type="text" name="customersitename" class="form-control" id="customersitename">
+                </div>
+
+                <div class="form-group">
+                    <label for="qty">Qty
+                        <span class="error">*</span> 
+                        <span class="error float-right">Please fill required Field</span>
+                    </label>
+                    <input type="text" name="qty" class="form-control text-right" id="qty">
+                </div>
+
+
             </div>
 
-            <div class="form-group">
-                <label for="recipename">Recipe Name
-                    <span class="error">*</span>
-                    <span class="error float-right">Please fill required Field</span>
-                </label>
-                <input type="text" name="recipename" class="form-control" id="recipename">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="unit">Unit
+                        <span class="error">*</span>
+                        <span class="error float-right">Please fill required Field</span>
+                    </label>
+                    <div >
+                        <p-dropdown [options]="addRecipeModelObject.unitArray" [(ngModel)]="addRecipeModelObject.selectedUnit" placeholder="Select a Unit" [filter]="true"></p-dropdown>
+                    </div>    
+                </div>
+
+                <div class="form-group">
+                    <label for="productiontype">Production Type
+                        <span class="error">*</span>
+                        <span class="error float-right">Please fill required Field</span>
+                    </label>
+                    <p-dropdown [options]="addRecipeModelObject.productionTypeArray" [(ngModel)]="addRecipeModelObject.selectedProductionTYpe" placeholder="Production Type" [filter]="true"></p-dropdown>
+                </div>
+
+                <div class="form-group">
+                    <label for="item">Item
+                        <span class="error">*</span>
+                        <span class="error float-right">Please fill required Field</span>
+                    </label>
+                    <p-dropdown [options]="addRecipeModelObject.itemArray" [(ngModel)]="addRecipeModelObject.selectedItem" placeholder="Item" [filter]="true"></p-dropdown>
+                </div>
             </div>
 
-            <div class="form-group">
-                <label for="customersitename">Customer Site Name </label>
-                <input type="text" name="customersitename" class="form-control" id="customersitename">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="customername">Customer Name</label>
+                    <p-dropdown [options]="addRecipeModelObject.customerNameArray" [(ngModel)]="addRecipeModelObject.selectedCustomer" placeholder="Customer Name" [filter]="true"></p-dropdown>
+                </div>
+
+                <div class="form-group">
+                    <label for="gst">GST</label>
+                    <p-dropdown [options]="addRecipeModelObject.gstArray" [(ngModel)]="addRecipeModelObject.selectedgst" placeholder="GST" [filter]="true"></p-dropdown>
+                </div>
+
+                <div class="form-group">
+                    <label for="sitename">Site Name</label>
+                    <p-dropdown [options]="addRecipeModelObject.siteNameArray" [(ngModel)]="addRecipeModelObject.selectedSiteName" placeholder="Site Name" [filter]="true"></p-dropdown>
+
+                    <!-- <p-multiSelect [options]="groupedCities" name="ts" [(ngModel)]="selectedCity3" placeholder="Select a City"
+                        >
+                        <ng-template let-group pTemplate="group">
+                            <div class="p-d-flex p-ai-center">
+                                <span>{{group.label}}</span>
+                            </div>
+                        </ng-template>
+                    </p-multiSelect> -->
+
+                </div>
             </div>
-
-            <div class="form-group">
-                <label for="qty">Qty
-                    <span class="error">*</span> 
-                    <span class="error float-right">Please fill required Field</span>
-                </label>
-                <input type="text" name="qty" class="form-control text-right" id="qty">
-            </div>
-
-
         </div>
-
-        <div class="col-md-4">
-            <div class="form-group">
-                <label for="unit">Unit
-                    <span class="error">*</span>
-                    <span class="error float-right">Please fill required Field</span>
-                </label>
-                <div >
-                    <p-dropdown [options]="addRecipeModelObject.unitArray" [(ngModel)]="addRecipeModelObject.selectedUnit" placeholder="Select a Unit" [filter]="true"></p-dropdown>
-                </div>    
-            </div>
-
-            <div class="form-group">
-                <label for="productiontype">Production Type
-                    <span class="error">*</span>
-                    <span class="error float-right">Please fill required Field</span>
-                </label>
-                <p-dropdown [options]="addRecipeModelObject.productionTypeArray" [(ngModel)]="addRecipeModelObject.selectedProductionTYpe" placeholder="Production Type" [filter]="true"></p-dropdown>
-            </div>
-
-            <div class="form-group">
-                <label for="item">Item
-                    <span class="error">*</span>
-                    <span class="error float-right">Please fill required Field</span>
-                </label>
-                <p-dropdown [options]="addRecipeModelObject.itemArray" [(ngModel)]="addRecipeModelObject.selectedItem" placeholder="Item" [filter]="true"></p-dropdown>
-            </div>
-        </div>
-
-        <div class="col-md-4">
-            <div class="form-group">
-                <label for="customername">Customer Name</label>
-                <p-dropdown [options]="addRecipeModelObject.customerNameArray" [(ngModel)]="addRecipeModelObject.selectedCustomer" placeholder="Customer Name" [filter]="true"></p-dropdown>
-            </div>
-
-            <div class="form-group">
-                <label for="gst">GST</label>
-                <p-dropdown [options]="addRecipeModelObject.gstArray" [(ngModel)]="addRecipeModelObject.selectedgst" placeholder="GST" [filter]="true"></p-dropdown>
-            </div>
-
-            <div class="form-group">
-                <label for="sitename">Site Name</label>
-                <p-dropdown [options]="addRecipeModelObject.siteNameArray" [(ngModel)]="addRecipeModelObject.selectedSiteName" placeholder="Site Name" [filter]="true"></p-dropdown>
-
-                <!-- <p-multiSelect [options]="groupedCities" name="ts" [(ngModel)]="selectedCity3" placeholder="Select a City"
-                    >
-                    <ng-template let-group pTemplate="group">
-                        <div class="p-d-flex p-ai-center">
-                            <span>{{group.label}}</span>
-                        </div>
-                    </ng-template>
-                </p-multiSelect> -->
-
-            </div>
-        </div>
-
-        <div class="col-md-12">
-            <lib-lib-table 
-                [tableCols]="addRecipeModelObject.tableCols" 
-                [tableData]="addRecipeModelObject.tableArray">
-            </lib-lib-table>
-        </div> 
-
     </div>
+    <br/>
+
+    <div class="col-md-12 whitebox">
+        <div class="row">
+            <div class="col-md-12">
+                <lib-lib-table 
+                    [tableCols]="addRecipeModelObject.tableCols" 
+                    [tableData]="addRecipeModelObject.tableArray"
+                    [tableTypeData]="basic">
+                </lib-lib-table>
+            </div> 
+        </div>    
+    </div> 
+    <br/>
+    <div class="col-md-12 whitebox">
+        <div class="row">
+            <div class="col-md-12">
+                <lib-lib-table 
+                    [tableCols]="addRecipeModelObject.tableCols" 
+                    [tableData]="addRecipeModelObject.tableArray"
+                    [tableTypeData]="expand">
+                </lib-lib-table>
+            </div> 
+        </div>    
+    </div> 
+    <br/>
+    <div class="col-md-12 whitebox">
+        <div class="row">
+            
+            <div class="col-md-12">
+                <lib-lib-table 
+                    [tableCols]="addRecipeModelObject.tableCols" 
+                    [tableData]="addRecipeModelObject.tableArray"
+                    [tableTypeData]="crud">
+                </lib-lib-table>
+            </div> 
+            
+        </div>    
+    </div> 
 </div>
