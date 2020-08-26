@@ -1,3 +1,5 @@
+@import '../_base';
+
 .basicTheme{
     
     // CSS for left panel
@@ -98,6 +100,11 @@
                 padding: 15px;
             }
         }
+    }
+
+    .ui-button {
+        background-color: $primaryColor;
+        border: 1px solid $primaryColor;
     }
 
 

@@ -1,1 +1,61 @@
-<p>ig-add works!</p>
+<div id="add_ig">
+    <div class="title row">Item Group</div>
+    <div class="col-md-12 whitebox">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="itemgroup">Item Group
+                        <span class="error">*</span>
+                        <span class="error float-right">Please fill required Field</span>
+                    </label>
+                    <input type="text" name="itemgroup" class="form-control" id="itemgroup">
+                </div>
+
+                <div class="form-group">
+                    <label for="itemtype">Item Type</label>
+                    <div>
+                        <p-dropdown [options]="addItemGroupModelObj.itemTypeArray" [(ngModel)]="addItemGroupModelObj.selectedItemType" placeholder="Selected Item Type" [filter]="true"></p-dropdown>
+                    </div>    
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="purchaseAccount">Purchase Account</label>
+                    <div>
+                        <p-dropdown [options]="addItemGroupModelObj.purchaseAccountArray" [(ngModel)]="addItemGroupModelObj.selectedPurchaseAccount" placeholder="Select Purchase Account" [filter]="true"></p-dropdown>
+                    </div>    
+                </div>
+
+                <div class="form-group">
+                    <label for="shortnameforaccount">Short Name for Add Account</label>
+                    <input type="text" name="shortnameforaccount" class="form-control" id="shortnameforaccount">
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="gstTax">GST Tax</label>
+                    <div>
+                        <p-dropdown [options]="addItemGroupModelObj.GSTArray" [(ngModel)]="addItemGroupModelObj.seletedGST" placeholder="Select GST" [filter]="true"></p-dropdown>
+                    </div>    
+                </div>
+
+                <div class="form-group">
+                    <label for="primaryGroup">Primary Group</label>
+                    <div>
+                        <p-dropdown [options]="addItemGroupModelObj.primaryGroupArray" [(ngModel)]="addItemGroupModelObj.selectedPrimaryGroup" placeholder="Select Primary" [filter]="true"></p-dropdown>
+                    </div>    
+                </div>
+            </div>
+
+            <div class="col-md-12 text-center">
+                <br/>
+                <button pButton type="button" label="Save"></button>
+                <button pButton type="button" label="Close"></button>
+            </div> 
+
+        </div>
+    </div>            
+</div>
+

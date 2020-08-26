@@ -1,1 +1,58 @@
-<p>ig-list works!</p>
+<div id="add_iglist">
+        <div class="title row">Item List</div>
+        <div class="col-md-12 whitebox">
+            <div class="row">
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <label for="itemgroup">Item Group</label>
+                        <input type="text" name="itemgroup" class="form-control" id="itemgroup">
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="itemtype">Item Type</label>
+                        <div>
+                            <p-dropdown [options]="listItemGroupModel.itemTypeArray" [(ngModel)]="listItemGroupModel.selectedItemType" placeholder="Selected Item Type" [filter]="true"></p-dropdown>
+                        </div>    
+                    </div>
+                </div>
+                
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="purchaseAccount">Purchase Account</label>
+                        <div>
+                            <p-dropdown [options]="listItemGroupModel.purchaseAccountArray" [(ngModel)]="listItemGroupModel.selectedPurchaseAccount" placeholder="Select Purchase Account" [filter]="true"></p-dropdown>
+                        </div>    
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="form-check form-group">
+                        <label for="recivedby" class="accountStatus">Purchase A/c Status</label>
+                        <label class="form-check-label assignLabel" for="assigned">
+                            <input type="radio" class="form-check-input" id="assigned" name="accountStatus" value="self" checked>Assigned
+                        </label>
+    
+                        <label class="form-check-label ml-5" for="notassigned">
+                            <input type="radio" class="form-check-input" id="notassigned" name="accountStatus" value="party">Not Assigned
+                        </label>
+
+                        <label class="form-check-label ml-5" for="both">
+                            <input type="radio" class="form-check-input" id="both" name="accountStatus" value="party">Both
+                        </label>
+                    </div>
+                </div>    
+                
+    
+                <div class="col-md-12 text-center">
+                    <br/>
+                    <button pButton type="button" label="Save"></button>
+                    <button pButton type="button" label="Close"></button>
+                </div> 
+    
+            </div>
+        </div>            
+    </div>
+    
+    

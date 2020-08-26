@@ -9,6 +9,7 @@ import { ListRecipeModel } from '../../../models/recipe.model';
 export class ListComponent implements OnInit {
 
   listRecipeModelObject: ListRecipeModel = new ListRecipeModel();
+  basic: string = 'basic';
   
   constructor() { }
 
