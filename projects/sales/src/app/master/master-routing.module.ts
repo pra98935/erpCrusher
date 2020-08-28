@@ -5,6 +5,8 @@ import { ListComponent } from './recipe/list/list.component';
 import { IgAddComponent } from './item-group/ig-add/ig-add.component';
 import { IgListComponent } from './item-group/ig-list/ig-list.component';
 import { Constants } from '../constants/constants';
+import { ImListComponent } from './item-master/im-list/im-list.component';
+import { ImAddComponent } from './item-master/im-add/im-add.component';
 
 const routes: Routes = [
   {
@@ -22,6 +24,14 @@ const routes: Routes = [
   {
     path: Constants.ITEM_GROUP + '/' + Constants.LIST,
     component: IgListComponent
+  },
+  {
+    path: Constants.ITEM_MASTER + '/' + Constants.ADD,
+    component: ImAddComponent
+  },
+  {
+    path: Constants.ITEM_MASTER + '/' + Constants.LIST,
+    component: ImListComponent
   }
 ];
 

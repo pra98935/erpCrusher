@@ -12,12 +12,14 @@ import { ListComponent } from './recipe/list/list.component';
 import { AddComponent } from './recipe/add/add.component';
 import { IgListComponent } from './item-group/ig-list/ig-list.component';
 import { IgAddComponent } from './item-group/ig-add/ig-add.component';
+import { ImAddComponent } from './item-master/im-add/im-add.component';
+import { ImListComponent } from './item-master/im-list/im-list.component';
 
 
 
 
 @NgModule({
-  declarations: [ListComponent, AddComponent, IgListComponent, IgAddComponent],
+  declarations: [ListComponent, AddComponent, IgListComponent, IgAddComponent, ImAddComponent, ImListComponent],
   imports: [
     CommonModule,
     MasterRoutingModule,

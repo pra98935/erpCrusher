@@ -12,6 +12,7 @@ export const Constants = {
 
     RECIPE: 'recipe',
     ITEM_GROUP: 'item-group',
+    ITEM_MASTER: 'item-master',
 
     ADD: 'add',
     LIST: 'list',

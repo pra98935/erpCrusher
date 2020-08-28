@@ -79,6 +79,19 @@ export class PortalLeftComponent implements OnInit {
                         command: (event) => { this.router.navigate([Constants.ITEM_GROUP + '/' + Constants.LIST]) }
                     }
                 ]
+              },
+              {
+                label: 'Item Master', 
+                items: [
+                    {
+                        label: 'Add', 
+                        command: (event) => { this.router.navigate([Constants.ITEM_MASTER + '/' + Constants.ADD]) }
+                    },
+                    {
+                        label: 'List',
+                        command: (event) => { this.router.navigate([Constants.ITEM_MASTER + '/' + Constants.LIST]) }
+                    }
+                ]
               }
           ]
       }
