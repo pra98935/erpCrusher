@@ -17,3 +17,16 @@ export class AddItemMasterModel{
 export class commonModel{
     ownState: string;
 }
+
+export class ItemMasterSearchModel{
+    itemNameArray=[];
+    selectedItemName: string;
+    itemGroupArray = [];
+    selectedItemGroup: string;
+    gstArray=[];
+    selectedGST: string;
+    status: string;
+    userByArray = [];
+    selectedUserBy: string;
+    selectedUserAction: any[] = [];
+}

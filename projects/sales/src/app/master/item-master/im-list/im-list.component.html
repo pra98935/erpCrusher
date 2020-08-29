@@ -1,1 +1,73 @@
-<p>im-list works!</p>
+<div id="list_im">
+    <div class="title row">Item List</div>
+    <div class="col-md-12 whitebox">
+        <div class="row">
+            
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="itemGroup">Item Name</label>
+                    <div>
+                        <p-dropdown [options]="itemMasterSearchModelObj.itemNameArray" [(ngModel)]="itemMasterSearchModelObj.selectedItemName" placeholder="Selected Item Group" [filter]="true"></p-dropdown>
+                    </div>    
+                </div>
+
+                <div class="form-group">
+                    <label for="itemGroup">Item Group</label>
+                    <div>
+                        <p-dropdown [options]="itemMasterSearchModelObj.itemGroupArray" [(ngModel)]="itemMasterSearchModelObj.selectedItemGroup" placeholder="Selected Item Group" [filter]="true"></p-dropdown>
+                    </div>    
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="gst">GST</label>
+                    <div>
+                        <p-dropdown [options]="itemMasterSearchModelObj.gstArray" [(ngModel)]="itemMasterSearchModelObj.selectedGST" placeholder="Selected GST" [filter]="true"></p-dropdown>
+                    </div>    
+                </div>
+
+                <div class="form-group">
+                    <div class="form-check form-group">
+                        <label for="recivedby" class="status">Status</label>
+                        <label class="form-check-label" for="active">
+                            <input type="radio" class="form-check-input" id="active" name="status" value="Active" checked>Active
+                        </label>
+    
+                        <label class="form-check-label ml-5" for="inactive">
+                            <input type="radio" class="form-check-input" id="inactive" name="status" value="Inactive">Inactive
+                        </label>
+                    </div>   
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="itemGroup">User By</label>
+                    <div>
+                        <p-dropdown [options]="itemMasterSearchModelObj.userByArray" [(ngModel)]="itemMasterSearchModelObj.selectedUserBy" placeholder="Selected Item Group" [filter]="true"></p-dropdown>
+                        <div class="d-flex checkboxSection">
+                            <div class="p-grid" style="width:250px;margin-bottom:10px">   
+                                <p-checkbox class="halfWidth" name="group1" value="add" label="Add" [(ngModel)]="itemMasterSearchModelObj.selectedUserAction" inputId="add"></p-checkbox>
+                                <p-checkbox class="halfWidth" name="group1" value="edit" label="Edit" [(ngModel)]="itemMasterSearchModelObj.selectedUserAction" inputId="edit"></p-checkbox>
+                            </div>
+                        </div>
+                        <!-- <p-checkbox name="groupname" value="val2" [(ngModel)]="selectedUserAction"></p-checkbox> -->
+                    </div>    
+                </div>
+
+                
+            </div>
+
+            
+
+            <div class="col-md-12 text-center">
+                <br/>
+                <button pButton type="button" label="Save"></button>
+                <button pButton type="button" label="Close"></button>
+            </div> 
+
+        </div>
+    </div>            
+</div>
+

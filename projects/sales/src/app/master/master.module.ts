@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { DropdownModule } from 'primeng/dropdown';
 import { ButtonModule } from 'primeng/button';
 import { LibTableModule } from 'lib-table';
+import {CheckboxModule} from 'primeng/checkbox';
 
 import { MasterRoutingModule } from './master-routing.module';
 import { ListComponent } from './recipe/list/list.component';
@@ -27,7 +28,8 @@ import { ImListComponent } from './item-master/im-list/im-list.component';
     FormsModule,
     DropdownModule,
     ButtonModule,
-    LibTableModule
+    LibTableModule,
+    CheckboxModule
   ]
 })
 export class MasterModule { }

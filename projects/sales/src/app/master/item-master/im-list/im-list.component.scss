@@ -1,0 +1,19 @@
+label.form-check-label{
+    display: initial;
+}
+.status{
+    margin-left: -20px;
+}
+.halfWidth{
+    width: 60%;
+}
+
+
+::ng-deep #list_im .checkboxSection label {
+    display: inline !important;
+    margin-right:20px; 
+}
+
+.checkboxSection{
+    margin-top: 15px;
+}
