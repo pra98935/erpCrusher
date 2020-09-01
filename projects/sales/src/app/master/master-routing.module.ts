@@ -7,6 +7,8 @@ import { IgListComponent } from './item-group/ig-list/ig-list.component';
 import { Constants } from '../constants/constants';
 import { ImListComponent } from './item-master/im-list/im-list.component';
 import { ImAddComponent } from './item-master/im-add/im-add.component';
+import {AccAddComponent} from './account/acc-add/acc-add.component';
+import {AccListComponent} from './account/acc-list/acc-list.component';
 
 const routes: Routes = [
   {
@@ -32,6 +34,14 @@ const routes: Routes = [
   {
     path: Constants.ITEM_MASTER + '/' + Constants.LIST,
     component: ImListComponent
+  },
+  {
+    path: Constants.ACCOUNT + '/' + Constants.ADD,
+    component: AccAddComponent
+  },
+  {
+    path: Constants.ACCOUNT + '/' + Constants.LIST,
+    component: AccListComponent
   }
 ];
 

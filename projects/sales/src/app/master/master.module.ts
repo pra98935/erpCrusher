@@ -15,12 +15,19 @@ import { IgListComponent } from './item-group/ig-list/ig-list.component';
 import { IgAddComponent } from './item-group/ig-add/ig-add.component';
 import { ImAddComponent } from './item-master/im-add/im-add.component';
 import { ImListComponent } from './item-master/im-list/im-list.component';
+import { AccAddComponent } from './account/acc-add/acc-add.component';
+import { AccListComponent } from './account/acc-list/acc-list.component';
+import { AccCompanySiteComponent } from './account/acc-company-site/acc-company-site.component';
+import { AccAddressComponent } from './account/acc-address/acc-address.component';
+import { AccBankDetailComponent } from './account/acc-bank-detail/acc-bank-detail.component';
+import { AccTaxDetailComponent } from './account/acc-tax-detail/acc-tax-detail.component';
+import { AccContactDetailsComponent } from './account/acc-contact-details/acc-contact-details.component';
 
 
 
 
 @NgModule({
-  declarations: [ListComponent, AddComponent, IgListComponent, IgAddComponent, ImAddComponent, ImListComponent],
+  declarations: [ListComponent, AddComponent, IgListComponent, IgAddComponent, ImAddComponent, ImListComponent, AccAddComponent, AccListComponent, AccCompanySiteComponent, AccAddressComponent, AccBankDetailComponent, AccTaxDetailComponent, AccContactDetailsComponent],
   imports: [
     CommonModule,
     MasterRoutingModule,

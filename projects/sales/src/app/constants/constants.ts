@@ -10,13 +10,14 @@ export const Constants = {
 
     SALES: 'sales',
 
-    RECIPE: 'recipe',
-    ITEM_GROUP: 'item-group',
-    ITEM_MASTER: 'item-master',
+    RECIPE: 'master/recipe',
+    ITEM_GROUP: 'master/item-group',
+    ITEM_MASTER: 'master/item-master',
+    ACCOUNT: 'master/account',
 
     ADD: 'add',
     LIST: 'list',
 
-    DASHBOARD: 'dashboard',
+    DASHBOARD: 'master/dashboard',
 
 };
