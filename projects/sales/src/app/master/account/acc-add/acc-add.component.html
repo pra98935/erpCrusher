@@ -3,50 +3,47 @@
     <div class="col-md-12 whitebox">
         <div class="row">
             <div class="col-md-4">
-                <!-- <div class="form-group">
-                    <label for="itemgroup">Item Group
+                <div class="form-group">
+                    <label for="accountName">Account Name
                         <span class="error">*</span>
                         <span class="error float-right">Please fill required Field</span>
                     </label>
-                    <input type="text" name="itemgroup" class="form-control" id="itemgroup">
+                    <input type="text" name="accountname" class="form-control" id="accountname">
                 </div>
 
                 <div class="form-group">
-                    <label for="itemtype">Item Type</label>
-                    <div>
-                        <p-dropdown [options]="addItemGroupModelObj.itemTypeArray" [(ngModel)]="addItemGroupModelObj.selectedItemType" placeholder="Selected Item Type" [filter]="true"></p-dropdown>
-                    </div>    
-                </div> -->
+                    <label for="chequePrintName">Cheque Print Name</label>
+                    <input type="text" name="chequePrintName" class="form-control" id="chequeprintname">
+                </div>
             </div>
             
             <div class="col-md-4">
-                <!-- <div class="form-group">
-                    <label for="purchaseAccount">Purchase Account</label>
+                <div class="form-group">
+                    <label for="accountgrp">Purchase Account</label>
                     <div>
-                        <p-dropdown [options]="addItemGroupModelObj.purchaseAccountArray" [(ngModel)]="addItemGroupModelObj.selectedPurchaseAccount" placeholder="Select Purchase Account" [filter]="true"></p-dropdown>
+                        <p-dropdown [options]="addAccountModelObj.accountGrpArray" [(ngModel)]="addAccountModelObj.selectedAccountGrp" placeholder="Select Account Group" [filter]="true"></p-dropdown>
                     </div>    
                 </div>
 
                 <div class="form-group">
-                    <label for="shortnameforaccount">Short Name for Add Account</label>
-                    <input type="text" name="shortnameforaccount" class="form-control" id="shortnameforaccount">
-                </div> -->
+                    <div class="row m-0">
+                        <div class="col-md-9 p-0">
+                            <label for="openingbalance">Opening Balance</label>
+                            <input type="text" name="openingbalance" class="form-control" id="openingbalance">
+                        </div>
+                        <div class="col-md-3 typetrasfer pr-0">
+                            <p-dropdown [options]="addAccountModelObj.transferTypeArray" [(ngModel)]="addAccountModelObj.selecetedTransferType"></p-dropdown>
+                        </div> 
+                    </div>  
+
+                </div>
             </div>
             
             <div class="col-md-4">
-                <!-- <div class="form-group">
-                    <label for="gstTax">GST Tax</label>
-                    <div>
-                        <p-dropdown [options]="addItemGroupModelObj.GSTArray" [(ngModel)]="addItemGroupModelObj.seletedGST" placeholder="Select GST" [filter]="true"></p-dropdown>
-                    </div>    
-                </div>
-
                 <div class="form-group">
-                    <label for="primaryGroup">Primary Group</label>
-                    <div>
-                        <p-dropdown [options]="addItemGroupModelObj.primaryGroupArray" [(ngModel)]="addItemGroupModelObj.selectedPrimaryGroup" placeholder="Select Primary" [filter]="true"></p-dropdown>
-                    </div>    
-                </div> -->
+                    <label for="date">Date</label>
+                    <input type="date" name="date" class="form-control" id="date">
+                </div>
             </div>
 
             <div class="col-md-12 text-center">
@@ -61,19 +58,22 @@
     <div class="col-md-12 whitebox">
         <p-tabView>
             <p-tabPanel header="Company Site">
-                The story begins as Don Vito Corleone, the head of a New York Mafia family, overseeshis daughter's wedding. His beloved son ichael has just come home from the war, but does not intend to become part of his father's business. T hrough Michael's life the nature of the family business becomes clear. The business of the family is just like the head of the family, kind and benevolent to those who give respect, but given to ruthless violence whenever anything stands against the good of the family.
+                <app-acc-company-site></app-acc-company-site>
             </p-tabPanel>
             <p-tabPanel header="Address Details">
-                Francis Ford Coppola's legendary continuation and sequel to his landmark 1972 film, The_Godfather parallels the young Vito Corleone's rise with his son Michael's spiritual fall, deepening The_Godfather's depiction of the dark side of the American dream. In the early 1900s, the child Vito flees his Sicilian village for America after the local Mafia kills his family. Vito struggles to make a living, legally or illegally, for his wife and growing brood in Little Italy, killing the local Black Hand Fanucci after he demands his customary cut of the tyro's business. With Fanucci gone, Vito's communal stature grows.
+                <app-acc-address></app-acc-address>
             </p-tabPanel>
             <p-tabPanel header="Bank Details">
-                After a break of more than  15 years, director Francis Ford Coppola and writer Mario Puzo returned to the well for this third and final story of the fictional Corleone crime family. Two decades have passed, and crime kingpin Michael Corleone, now divorced from his wife Kay has nearly succeeded in keeping his promise that his family would one day be completely legitimate.
+                <app-acc-bank-detail></app-acc-bank-detail>
             </p-tabPanel>
             <p-tabPanel header="Tax Details">
-                After a break of more than  15 years, director Francis Ford Coppola and writer Mario Puzo returned to the well for this third and final story of the fictional Corleone crime family. Two decades have passed, and crime kingpin Michael Corleone, now divorced from his wife Kay has nearly succeeded in keeping his promise that his family would one day be completely legitimate.
+                <app-acc-tax-detail></app-acc-tax-detail>
             </p-tabPanel>
             <p-tabPanel header="Contact Details">
-                After a break of more than  15 years, director Francis Ford Coppola and writer Mario Puzo returned to the well for this third and final story of the fictional Corleone crime family. Two decades have passed, and crime kingpin Michael Corleone, now divorced from his wife Kay has nearly succeeded in keeping his promise that his family would one day be completely legitimate.
+                <app-acc-contact-details></app-acc-contact-details>
+            </p-tabPanel>
+            <p-tabPanel header="KYC Details">
+                <app-kyc-details></app-kyc-details>
             </p-tabPanel>
         </p-tabView>
     </div>

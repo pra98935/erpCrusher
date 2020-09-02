@@ -23,12 +23,13 @@ import { AccAddressComponent } from './account/acc-address/acc-address.component
 import { AccBankDetailComponent } from './account/acc-bank-detail/acc-bank-detail.component';
 import { AccTaxDetailComponent } from './account/acc-tax-detail/acc-tax-detail.component';
 import { AccContactDetailsComponent } from './account/acc-contact-details/acc-contact-details.component';
+import { KycDetailsComponent } from './account/kyc-details/kyc-details.component';
 
 
 
 
 @NgModule({
-  declarations: [ListComponent, AddComponent, IgListComponent, IgAddComponent, ImAddComponent, ImListComponent, AccAddComponent, AccListComponent, AccCompanySiteComponent, AccAddressComponent, AccBankDetailComponent, AccTaxDetailComponent, AccContactDetailsComponent],
+  declarations: [ListComponent, AddComponent, IgListComponent, IgAddComponent, ImAddComponent, ImListComponent, AccAddComponent, AccListComponent, AccCompanySiteComponent, AccAddressComponent, AccBankDetailComponent, AccTaxDetailComponent, AccContactDetailsComponent, KycDetailsComponent],
   imports: [
     CommonModule,
     MasterRoutingModule,
