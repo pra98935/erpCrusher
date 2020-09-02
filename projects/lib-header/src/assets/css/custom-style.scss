@@ -74,7 +74,7 @@ body{
   }
 
   /////////////////////
-  // Panel Menu
+  // Panel Menu PrimeNG
   /////////////////////
   .ui-panelmenu .ui-panelmenu-content .ui-menuitem .ui-menuitem-link:focus {
       outline: 0 none;
@@ -109,5 +109,9 @@ body{
   .form-group:last-child{
     margin-bottom: 0;
   }
+
+  /////////////////////
+  // Tab PrimeNg
+  ////////////////////
   
 }
