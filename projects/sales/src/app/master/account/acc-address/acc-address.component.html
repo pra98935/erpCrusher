@@ -1,1 +1,42 @@
-<p>acc-address works!</p>
+<div id="account_address_detail">
+    <div class="col-md-12 whitebox">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="billingAddress">Billing Address</label>
+                    <!-- <input type="text" name="billingAddress" class="form-control" id="billingAddress"> -->
+                    <textarea class="form-control" name="billingAddress"></textarea>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="city">City</label>
+                    <div>
+                        <p-dropdown [options]="addressDetailsModelObj.cityArray" [(ngModel)]="addressDetailsModelObj.selectedCity" placeholder="Select City" [filter]="true"></p-dropdown>
+                    </div>    
+                </div>
+
+                <div class="form-group">
+                    <label for="pincode">Pin Code</label>
+                    <input type="number" name="pincode" class="form-control" id="pincode">
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="contact">Contact</label>
+                    <input type="number" name="contact" class="form-control" id="contact">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" class="form-control" id="email">
+                </div>
+            </div>
+
+            
+
+        </div>
+    </div> 
+</div>    
