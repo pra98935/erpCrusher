@@ -28,8 +28,9 @@ export class bankDetailsModel{
 
     bankCode: string;
     branchCode: string;
-    interestRateArray = [];
-    selectedInterestRate: string;
+    interestRate: number;
+    // interestRateArray = [];
+    // selectedInterestRate: string;
     calculationTypeArray = [];
     selectedCalculationType: string;
     dabitCreaditLimit: number;

@@ -11,7 +11,7 @@ export class AccAddressComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-
+    this.cityList()
   }
 
   cityList(){
