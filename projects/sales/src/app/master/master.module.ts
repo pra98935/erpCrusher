@@ -8,6 +8,11 @@ import { ButtonModule } from 'primeng/button';
 import { LibTableModule } from 'lib-table';
 import { CheckboxModule } from 'primeng/checkbox';
 import { TabViewModule } from 'primeng/tabview';
+import { TableModule } from 'primeng/table';
+import { ConfirmDialogModule } from 'primeng/confirmdialog';
+import { DialogModule } from 'primeng/dialog';
+import { ToastModule } from 'primeng/toast';
+
 
 import { MasterRoutingModule } from './master-routing.module';
 import { ListComponent } from './recipe/list/list.component';
@@ -39,7 +44,11 @@ import { KycDetailsComponent } from './account/kyc-details/kyc-details.component
     ButtonModule,
     LibTableModule,
     CheckboxModule,
-    TabViewModule
+    TabViewModule,
+    TableModule,
+    ConfirmDialogModule,
+    DialogModule,
+    ToastModule
   ]
 })
 export class MasterModule { }
