@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {taxDetailsModel, taxDetailsRecord} from '../../../models/master/account.model';
-import {MessageService} from 'primeng/api';
+import { MessageService } from 'primeng/api';
 import { ConfirmationService } from 'primeng/api';
 
 @Component({

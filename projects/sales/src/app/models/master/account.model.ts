@@ -38,6 +38,17 @@ export class bankDetailsModel{
     selecetedTransferType?: string;
     daysArray? = [];
     selectedDays?: string;
+    bankTableArray? = [];
+    addRecordDialoge?: boolean = false;
+}
+
+export class bankDetailsRecordModel{
+    accountNumber?: number;
+    selectedAccountType?: string;
+    ifscCode?: string;
+    bankName?: string;
+    bankBranch?: string;
+    id?: number = 0;
 }
 
 export class taxDetailsModel{
