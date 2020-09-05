@@ -76,6 +76,12 @@ export class taxDetailsRecord{
 }
 
 export class contactDetailsModel{
+    contactDetailTableArray? = []; 
+    addRecordDialoge?: boolean = false;
+    gstNumberArray? = [];
+}
+
+export class contactDetailsRecordModel{
     contactPerson?: string;
     designation?: string;
     jobSite?: string;
@@ -83,7 +89,8 @@ export class contactDetailsModel{
     city?: string;
     pin?: number;
     phone?: number;
-    gstNumber?: any;
+    selectedGstNumber?: any;
+    id?: number = 0;
 }
 
 export class kycUploadModel{

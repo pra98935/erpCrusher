@@ -1,1 +1,160 @@
-<p>acc-contact-details works!</p>
+<!-- ----------------------------- -->
+    <!-- Table section start from here -->
+    <!-- ----------------------------- -->
+    <div class="col-m-12 whitebox">
+
+            <p-table 
+            #taxdetail 
+            [value]="contactDetailsModelObj.contactDetailTableArray" 
+            [resizableColumns]="true"
+            columnResizeMode="expand" 
+            [showCurrentPageReport]="false"
+            [reorderableColumns]="true" 
+            dataKey='contactdetail'>
+    
+                <ng-template pTemplate="summary" let-rowData>
+                    <div style="text-align:left">
+                        <button type="button" pButton icon="pi pi-plus" (click)="add()" label="Add"></button>
+                    </div>
+                </ng-template>
+    
+                <!-- Header Part -->
+                <ng-template pTemplate="header">
+                    <tr>
+                        <th pResizableColumn pReorderableColumn>
+                            Contact Person
+                        </th>
+                        <th pResizableColumn pReorderableColumn>
+                            Designation
+                        </th>
+                        <th pResizableColumn pReorderableColumn>
+                            Jobsite
+                        </th>
+                        <th pResizableColumn pReorderableColumn>
+                            Address
+                        </th>
+                        <th pResizableColumn pReorderableColumn>
+                            City
+                        </th>
+                        <th pResizableColumn pReorderableColumn>
+                            Pin
+                        </th>
+                        <th pResizableColumn pReorderableColumn>
+                            Phone
+                        </th>
+                        <th pResizableColumn pReorderableColumn>
+                            GST No.
+                        </th>
+                        <th>Action</th>
+                    </tr>
+                </ng-template>
+    
+                <!-- Body Part -->
+                <ng-template pTemplate="body" let-rowData let-index="rowIndex">
+                    <tr [pReorderableRow]="index">
+                        <td class="ui-resizable-column">
+                            {{rowData.contactPerson}}
+                        </td>
+                        <td class="ui-resizable-column">
+                            {{rowData.designation}}
+                        </td>
+                        <td class="ui-resizable-column">
+                            {{rowData.jobSite}}
+                        </td>
+                        <td class="ui-resizable-column">
+                            {{rowData.address}}
+                        </td>
+                        <td class="ui-resizable-column">
+                            {{rowData.city}}
+                        </td>
+                        <td class="ui-resizable-column">
+                            {{rowData.pin}}
+                        </td>
+                        <td class="ui-resizable-column">
+                            {{rowData.phone}}
+                        </td>
+                        <td class="ui-resizable-column">
+                            {{rowData.selectedGstNumber}}
+                        </td>
+                        <td>
+                            <button pButton pRipple icon="pi pi-trash" class="p-button-rounded p-button-warning"
+                                (click)="deleteRow(rowData.id)"></button>
+                        </td>
+                    </tr>
+                </ng-template>
+            </p-table>
+        </div>
+    
+        <!-- ----------------------------- -->
+        <!-- Table section End -->
+        <!-- ----------------------------- -->
+    
+        <!-- ----------------------------- -->
+        <!-- Start Delete Modal from here -->
+        <!-- ----------------------------- -->
+        <p-confirmDialog [style]="{width: '50vw'}" key="deleteDialog" [style]="{width: '50vw'}"></p-confirmDialog>
+        <!-- ----------------------------- -->
+        <!-- End Delete Modal Here -->
+        <!-- ----------------------------- -->
+    
+        <!-- -------------------------------- -->
+        <!-- Start Add Record Modal from here -->
+        <!-- -------------------------------- -->
+        <p-dialog header="Bank Detail" [(visible)]="contactDetailsModelObj.addRecordDialoge" [focusOnShow]="false" [responsive]="true" showEffect="fade" [modal]="true"  [style]="{width: '300px'}">
+            <div class="p-grid ui-fluid">
+                <div class="container">
+                    
+                    <div class="form-group">
+                        <label for="contactPerson">Contact Person</label>
+                        <input type="text" name="contactPerson" [(ngModel)]="contactDetailsRecordModelObj.contactPerson" class="form-control" id="contactPerson">
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="designation">Designatione</label>
+                        <input type="text" name="designation" [(ngModel)]="contactDetailsRecordModelObj.designation" class="form-control" id="designation">
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="jobSite">Job Site</label>
+                        <input type="text" name="jobSite" [(ngModel)]="contactDetailsRecordModelObj.jobSite" class="form-control" id="jobSite">
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="address">Address</label>
+                        <input type="text" name="address" [(ngModel)]="contactDetailsRecordModelObj.address" class="form-control" id="address">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="city">City</label>
+                        <input type="text" name="city" [(ngModel)]="contactDetailsRecordModelObj.city" class="form-control" id="city">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pin">Pin</label>
+                        <input type="number" name="pin" [(ngModel)]="contactDetailsRecordModelObj.pin" class="form-control" id="pin">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="number" name="phone" [(ngModel)]="contactDetailsRecordModelObj.phone" class="form-control" id="phone">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="selectedAccountType">GST Number</label>
+                        <p-dropdown [options]="contactDetailsModelObj.gstNumberArray" [(ngModel)]="contactDetailsRecordModelObj.selectedGstNumber" placeholder="GST Number" [filter]="true"></p-dropdown>
+                    </div>
+    
+                </div>
+            </div>
+            <p-footer>
+                <div class="ui-dialog-buttonpane ui-helper-clearfix">
+                    <button type="button" pButton icon="pi pi-times" (click)="deleteRecordFromModal()" label="Delete"></button>
+                    <button type="button" pButton icon="pi pi-check" (click)="saveRecordFromModal()" label="Save"></button>
+                </div>
+            </p-footer>
+        </p-dialog>
+        <!-- -------------------------------- -->
+        <!-- End Add Record Modal from here -->
+        <!-- -------------------------------- -->
+    
+        <p-toast></p-toast>
