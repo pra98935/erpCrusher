@@ -57,7 +57,6 @@ export class taxDetailsModel{
 }
 
 export class taxDetailsRecord{
-    stateArray? = [];
     selectedState?: string;
     gstNumber?: any;
     address?: string;

@@ -104,7 +104,7 @@ export class AccTaxDetailComponent implements OnInit {
   }
 
   stateList(){
-    this.taxDetailsRecordObj.stateArray = [
+    this.taxDetailsModelObj.stateArray = [
       {label: 'New York', value: 'NY'},
       {label: 'Rome', value: 'RM'},
       {label: 'London', value: 'LDN'},
