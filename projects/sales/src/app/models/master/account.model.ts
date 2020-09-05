@@ -79,6 +79,15 @@ export class contactDetailsModel{
     contactDetailTableArray? = []; 
     addRecordDialoge?: boolean = false;
     gstNumberArray? = [];
+
+    contactPerson?: string;
+    designation?: string;
+    jobSite?: string;
+    address?: string;
+    city?: string;
+    pin?: number;
+    phone?: number;
+    selectedGstNumber?: any;
 }
 
 export class contactDetailsRecordModel{
@@ -98,4 +107,13 @@ export class kycUploadModel{
     selectedDocument?: string;
     remark?: string;
     upload?: string;
+    addRecordDialoge?: boolean = false;
+    kycTableArray? = []
+}
+
+export class kycUploadRecordModel{
+    selectedDocument?: string;
+    remark?: string;
+    upload?: string;
+    id?: number = 0;
 }
