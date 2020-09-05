@@ -17,6 +17,7 @@ export class AccTaxDetailComponent implements OnInit {
 
   ngOnInit(): void {
     this.taxDetailsList();
+    this.stateList();
   }
 
   /**
@@ -99,6 +100,17 @@ export class AccTaxDetailComponent implements OnInit {
     
     // Reinitialize object so form will blank when we will add new record
     this.taxDetailsRecordObj={};
+    this.stateList();
+  }
+
+  stateList(){
+    this.taxDetailsRecordObj.stateArray = [
+      {label: 'New York', value: 'NY'},
+      {label: 'Rome', value: 'RM'},
+      {label: 'London', value: 'LDN'},
+      {label: 'Istanbul', value: 'IST'},
+      {label: 'Paris', value: 'PRS'}
+    ];
   }
 
 }
