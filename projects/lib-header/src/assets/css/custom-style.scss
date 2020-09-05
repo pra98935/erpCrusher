@@ -97,9 +97,15 @@ body{
   /////////////////////
   // Normal Form
   ////////////////////
-  input[type="text"], input[type="email"], input[type="password"], input[type="number"] {
+  input[type="text"], input[type="email"], input[type="password"], input[type="number"], input[type="file"] {
       height: 28px !important;
   }
+
+  input[type="file"] {
+    padding-top: 1px !important;
+    padding-left: 0 !important;
+  }
+
   .form-group label{
     display: block;
   }

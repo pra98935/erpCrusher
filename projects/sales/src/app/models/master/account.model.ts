@@ -106,7 +106,7 @@ export class kycUploadModel{
     documentArray? = [];
     selectedDocument?: string;
     remark?: string;
-    upload?: string;
+    upload?: any;
     addRecordDialoge?: boolean = false;
     kycTableArray? = []
 }
@@ -114,6 +114,6 @@ export class kycUploadModel{
 export class kycUploadRecordModel{
     selectedDocument?: string;
     remark?: string;
-    upload?: string;
+    upload?: any;
     id?: number = 0;
 }
