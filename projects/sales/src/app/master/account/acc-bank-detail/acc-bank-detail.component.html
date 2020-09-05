@@ -12,7 +12,7 @@
                     <input type="text" name="branchCode" class="form-control" id="branchCode">
                 </div>
             </div>
-            
+
             <div class="col-md-4">
                 <div class="form-group">
                     <label for="interestRate">Pin Code</label>
@@ -22,49 +22,49 @@
                 <div class="form-group">
                     <label for="calculationtype">Calculation Type</label>
                     <div>
-                        <p-dropdown [options]="bankDetailsModelObj.calculationTypeArray" [(ngModel)]="bankDetailsModelObj.selectedCalculationType" placeholder="Select Calculation Type" [filter]="true"></p-dropdown>
-                    </div>    
+                        <p-dropdown [options]="bankDetailsModelObj.calculationTypeArray"
+                            [(ngModel)]="bankDetailsModelObj.selectedCalculationType"
+                            placeholder="Select Calculation Type" [filter]="true"></p-dropdown>
+                    </div>
                 </div>
             </div>
-            
+
             <div class="col-md-4">
                 <div class="form-group">
                     <div class="row m-0">
                         <div class="col-md-9 p-0">
                             <label for="debitcreditlimit">Debit/Credit Limit</label>
-                            <input type="number" name="debitcreditlimit" class="form-control text-right" id="debitcreditlimit">
+                            <input type="number" name="debitcreditlimit" class="form-control text-right"
+                                id="debitcreditlimit">
                         </div>
                         <div class="col-md-3 typetrasfer pr-0">
-                            <p-dropdown [options]="bankDetailsModelObj.transferTypeArray" [(ngModel)]="bankDetailsModelObj.selecetedTransferType"></p-dropdown>
-                        </div> 
-                    </div>  
+                            <p-dropdown [options]="bankDetailsModelObj.transferTypeArray"
+                                [(ngModel)]="bankDetailsModelObj.selecetedTransferType"></p-dropdown>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="form-group">
                     <label for="days">Days</label>
                     <div>
-                        <p-dropdown [options]="bankDetailsModelObj.daysArray" [(ngModel)]="bankDetailsModelObj.selectedDays" placeholder="Select Days" [filter]="true"></p-dropdown>
-                    </div>    
+                        <p-dropdown [options]="bankDetailsModelObj.daysArray"
+                            [(ngModel)]="bankDetailsModelObj.selectedDays" placeholder="Select Days" [filter]="true">
+                        </p-dropdown>
+                    </div>
                 </div>
             </div>
         </div>
-    </div> 
+    </div>
 
-    <br/>
+    <br />
 
     <!-- ----------------------------- -->
     <!-- Table section start from here -->
     <!-- ----------------------------- -->
     <div class="col-m-12 whitebox">
 
-        <p-table 
-        #taxdetail 
-        [value]="bankDetailsModelObj.bankTableArray" 
-        [resizableColumns]="true"
-        columnResizeMode="expand" 
-        [showCurrentPageReport]="false"
-        [reorderableColumns]="true" 
-        dataKey='bankdetail'>
+        <p-table #taxdetail [value]="bankDetailsModelObj.bankTableArray" [resizableColumns]="true"
+            columnResizeMode="expand" [showCurrentPageReport]="false" [reorderableColumns]="true" dataKey='bankdetail'>
 
             <ng-template pTemplate="summary" let-rowData>
                 <div style="text-align:left">
@@ -136,41 +136,49 @@
     <!-- -------------------------------- -->
     <!-- Start Add Record Modal from here -->
     <!-- -------------------------------- -->
-    <p-dialog header="Bank Detail" [(visible)]="bankDetailsModelObj.addRecordDialoge" [focusOnShow]="false" [responsive]="true" showEffect="fade" [modal]="true"  [style]="{width: '300px'}">
+    <p-dialog header="Bank Detail" [(visible)]="bankDetailsModelObj.addRecordDialoge" [focusOnShow]="false"
+        [responsive]="true" showEffect="fade" [modal]="true" [style]="{width: '300px'}">
         <div class="p-grid ui-fluid">
             <div class="container">
-                
+
                 <div class="form-group">
                     <label for="accountNumber">Account Number</label>
-                    <input type="text" name="accountNumber" [(ngModel)]="bankDetailsRecordModelObj.accountNumber" class="form-control" id="accountNumber">
+                    <input type="text" name="accountNumber" [(ngModel)]="bankDetailsRecordModelObj.accountNumber"
+                        class="form-control" id="accountNumber">
                 </div>
 
                 <div class="form-group">
                     <label for="selectedAccountType">Account Type</label>
                     <!-- <input type="text" name="selectedState" [(ngModel)]="taxDetailsRecordObj.selectedState" class="form-control" id="selectedState"> -->
-                    <p-dropdown [options]="bankDetailsModelObj.accountTypeArray" [(ngModel)]="bankDetailsRecordModelObj.selectedAccountType" placeholder="Account Type" [filter]="true"></p-dropdown>
+                    <p-dropdown [options]="bankDetailsModelObj.accountTypeArray"
+                        [(ngModel)]="bankDetailsRecordModelObj.selectedAccountType" placeholder="Account Type"
+                        [filter]="true"></p-dropdown>
                 </div>
 
                 <div class="form-group">
                     <label for="ifscCode">IFSC Code</label>
-                    <input type="text" name="ifscCode" [(ngModel)]="bankDetailsRecordModelObj.ifscCode" class="form-control" id="ifscCode">
+                    <input type="text" name="ifscCode" [(ngModel)]="bankDetailsRecordModelObj.ifscCode"
+                        class="form-control" id="ifscCode">
                 </div>
 
                 <div class="form-group">
                     <label for="bankName">Bank Name</label>
-                    <input type="text" name="bankName" [(ngModel)]="bankDetailsRecordModelObj.bankName" class="form-control" id="bankName">
+                    <input type="text" name="bankName" [(ngModel)]="bankDetailsRecordModelObj.bankName"
+                        class="form-control" id="bankName">
                 </div>
 
                 <div class="form-group">
                     <label for="bankBranch">Branch</label>
-                    <input type="text" name="bankBranch" [(ngModel)]="bankDetailsRecordModelObj.bankBranch" class="form-control" id="bankBranch">
+                    <input type="text" name="bankBranch" [(ngModel)]="bankDetailsRecordModelObj.bankBranch"
+                        class="form-control" id="bankBranch">
                 </div>
 
             </div>
         </div>
         <p-footer>
             <div class="ui-dialog-buttonpane ui-helper-clearfix">
-                <button type="button" pButton icon="pi pi-times" (click)="deleteRecordFromModal()" label="Delete"></button>
+                <button type="button" pButton icon="pi pi-times" (click)="deleteRecordFromModal()"
+                    label="Delete"></button>
                 <button type="button" pButton icon="pi pi-check" (click)="saveRecordFromModal()" label="Save"></button>
             </div>
         </p-footer>
@@ -181,4 +189,4 @@
 
     <p-toast></p-toast>
 
-</div>    
+</div>
